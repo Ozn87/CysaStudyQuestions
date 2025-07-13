@@ -1,0 +1,194 @@
+[
+  {
+    "question_number": "401",
+    "question_text": "Which of the following best describe the external requirements that are imposed for incident management communication? (Choose two).",
+    "image": null,
+    "options": {
+      "A": "Law enforcement involvement",
+      "B": "Compliance with regulatory requirements",
+      "C": "Transparency to stockholders",
+      "D": "Defined SLAs regarding services",
+      "E": "Industry advocacy group participation",
+      "F": "Framework guidelines"
+    },
+    "correct_answer": "BF"
+  },
+  {
+    "question_number": "402",
+    "question_text": "A security analyst observes a high volume of SYN flags from an unexpected source toward a web application server within one hour. The traffic is not flagging for any exploit signatures.\n\nWhich of the following scenarios best describes this activity?",
+    "image": null,
+    "options": {
+      "A": "A legitimate connection is continuously attempting to establish a connection with a downed web server.",
+      "B": "A script kiddie is attempting to execute a DDoS through a ping flood attack.",
+      "C": "An attacker is executing reconnaissance activities by mapping which ports are open and closed.",
+      "D": "A web exploit attempt is likely occurring and the security analyst is not seeing it."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": "403",
+    "question_text": "Which of the following features is a key component of Zero Trust architecture?",
+    "image": null,
+    "options": {
+      "A": "Single strong source of user identity",
+      "B": "Implementation of IT governance",
+      "C": "Business continuity plan",
+      "D": "Quality assurance",
+      "E": "Internal auditing process"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": "404",
+    "question_text": "An organization wants to establish a disaster recovery plan for critical applications that are hosted on premises. Which of the following is the first step to prepare for supporting this new requirement?",
+    "image": null,
+    "options": {
+      "A": "Choose a vendor to utilize for the disaster recovery location.",
+      "B": "Establish prioritization of continuity from data and business owners.",
+      "C": "Negotiate vendor agreements to support disaster recovery capabilities.",
+      "D": "Advise the leadership team that a geographical area for recovery must be defined."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": "405",
+    "question_text": "A junior security analyst opened ports on the company's firewall, and the company experienced a data breach. Which of the following most likely caused the data breach?",
+    "image": null,
+    "options": {
+      "A": "Environmental hacktivist",
+      "B": "Accidental insider threat",
+      "C": "Nation-state",
+      "D": "Organized crime group"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": "406",
+    "question_text": "When undertaking a cloud migration of multiple SaaS applications, an organization's systems administrators struggled with the complexity of extending identity and access management to cloud-based assets. Which of the following service models would have reduced the complexity of this project?",
+    "image": null,
+    "options": {
+      "A": "OpenID",
+      "B": "SDN",
+      "C": "ZTNA  ",
+      "D": "SWG"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": "407",
+    "question_text": "An analyst produces a weekly endpoint status report for the management team. The report Includes specific details for each endpoint in relation to organizational baselines. Which of the following best describes the report type?",
+    "image": null,
+    "options": {
+      "A": "Forensics",
+      "B": "Mitigation",
+      "C": "Vulnerability",
+      "D": "Compliance"
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": "408",
+    "question_text": "A user is suspected of violating policy by logging in to a Linux VM during non-business hours. Which of the following system files is the best way to track the user's activities?",
+    "image": null,
+    "options": {
+      "A": "/var/log/secure",
+      "B": "/etc/motd",
+      "C": "/var/log/messages",
+      "D": "/etc/passwd"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": "409",
+    "question_text": "A user's computer is performing slower than the day before, and unexpected windows continually open and close. The user did not install any new programs, and after the user restarted the desktop, the issue was not resolved. Which of the following incident response actions should be taken next?",
+    "image": null,
+    "options": {
+      "A": "Restart in safe mode and start a virus scan.",
+      "B": "Disconnect from the network and leave the PC turned on.",
+      "C": "Contain the device and implement a legal hold.",
+      "D": "Reformat and reimage the OS."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": "410",
+    "question_text": "Which of the following risk management decisions should be considered after evaluating all other options?",
+    "image": null,
+    "options": {
+      "A": "Transfer",
+      "B": "Acceptance",
+      "C": "Mitigation",
+      "D": "Avoidance"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": "411",
+    "question_text": "A security analyst finds an application that cannot enforce the organization's password policy. An exception is granted. As a compensating control, all users must confirm that their passwords comply with the organization's policy. Which of the following types of compensating controls is the organization using?",
+    "image": null,
+    "options": {
+      "A": "Corrective",
+      "B": "Managerial",
+      "C": "Technical",
+      "D": "Detective"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": "412",
+    "question_text": "A company has recently experienced a security breach via a public-facing service. Analysis of the event on the server was traced back to the following piece of code:\n\nSELECT * From user_data WHERE Username $=0$ and userid $l=1$ or $1=1;-$\n\nWhich of the following controls would be best to implement?",
+    "image": null,
+    "options": {
+      "A": "Deploy a wireless application protocol.",
+      "B": "Remove the end-of-life component.",
+      "C": "Implement proper access control.",
+      "D": "Validate user input."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": "413",
+    "question_text": "HOTSPOT\n\nA systems administrator is reviewing the output of a vulnerability scan.\n\nINSTRUCTIONS\n\nReview the information in each tab.\n\nBased on the organization's environment architecture and remediation standards, select the server to be patched within 14 days and select the appropriate technique and mitigation.\n\nIf at any time you would like to bring back the initial state of the simulation, please click the Reset All button.\n\nVulnerability remediation timeframes Environment\n\n\"Environment\n name\n\",\"Environment\n location\n\",\"Subnets\n\",\"Domain\n\",\"Publicly\n accessible\n\",\"NGFW\n\",\"Load\n balancer\n\",\"MFA\n required\n\"\r\n\"prod.comptia.org\n\",\"External\n\",\"104.17.18.29\n 104.17.18.30\n 192.168.60.0/24\n 192.168.61.0/24\n\",\"comptia.org\n\",\"Yes\n\",\"Yes\n\",\"Yes\n\",\"No\n\"\r\n\"dev.comptia.org\n\",\"Internal\n\",\"192.168.76.0/24\n 192.168.75.0/24\n\",\"comptia.org\n\",\"No\n\",\"No\n\",\"Yes\n\",\"Yes\n\"\r\n\"uat.comptia.org\n\",\"External\n\",\"192.168.50.0/24\n\n\n192.168.51.0/24\n\",\"comptia.org\n\",\"No\n\",\"Yes\n\",\"Yes\n\",\"Yes\n\"\n\nDurout\n\nVulnerability remediation timefram\n\n\"Title:\n\",\"Microsoft IIS: Unsupported software version detected\n\"\r\n\"Description:\n\",\"The software version detected is no longer supported.\n\"\r\n\"Affected asset:\n\",\"192.168.76.5\n\"\r\n\"Risk:\n\",\"Unpatched software\n\"\r\n\"Reference:\n\",\"CVE-2022-0155, CVSS 9.2\n\"\r\n\"Title:\n\",\"Sensitive cookie in HTTPS session without \"\"secure\"\" attribute\n\"\r\n\r\n\"Description:\n\",\"The secure attribute for sensitive cookies in HTTPS sessions is not set, which could cause the user agent to\n send those cookies in plaintext over HTTP session.\n\"\r\n\"Affected asset:\n\",\"192.168.76.6\n\"\r\n\"Risk:\n\",\"Session sidejacking\n\"\r\n\"Reference:\n\",\"CVE-2021-0462, CVSS 7.4\n\"\r\n\"Title:\n\",\"Untrusted SSL/TLS Server X.509 certificate\n\"\r\n\"Description:\n\",\"The server's TLS/SSL certificate is signed by a certificate authority that is untrusted or unknown.\n\"\r\n\"Affected asset:\n\",\"192.168.76.5 (dev server)\n\"\r\n\"Risk:\n\",\"May allow on-path attackers to insert a spoofed certificate for any distinguished name (DN).\n\"\r\n\"Reference:\n\",\"CVE-2021-1234, CVSS 8.1\n\"\r\n\"Title:\n\",\"Sensitive cookie in HTTPS session without \"\"secure\"\" attribute\n\"\r\n\"Description:\n\n\nAffected asset:\n\",\"The secure attribute for sensitive cookies in HTTPS sessions is not set, which could cause the user agent to\n send those cookies in plaintext over HTTP session.\n 192.168.60.6\n\"\r\n\"Risk:\n\",\"Session sidejacking\n\"\r\n\"Reference:\n\",\"CVE-2021-0462, CVSS 7.4\n\"\r\n\"Title:\n\",\"Untrusted SSL/TLS Server X.509 certificate\n\"\r\n\"Description:\n\",\"The server's TLS/SSL certificate is signed by a certificate authority that is untrusted or unknown.\n\"\r\n\"Affected asset:\n\",\"192.168.50.5\n\"\r\n\"Risk:\n\",\"May allow on-path attackers to insert a spoofed certificate for any distinguished name (DN).\n\"\r\n\"Reference:\n\",\"CVE-2021-1234, CVSS 8.1\n\"\r\n\"Title:\n\",\"Sensitive cookie in HTTPS session without \"\"secure\"\" attribute\n\"\r\n\"Description:\n\n\nAffected asset:\n\",\"The secure attribute for sensitive cookies in HTTPS sessions is not set, which could cause the user agent to\n send those cookies in plaintext over HTTP session.\n 192.168.60.6\n\"\r\n\"Risk:\n\",\"Session sidejacking\n\"\r\n\"Reference:\n\",\"CVE-2021-0462, CVSS 7.4\n\"\r\n\"Title:\n\",\"Untrusted SSL/TLS Server X.509 certificate\n\"\r\n\"Description:\n\",\"The server's TLS/SSL certificate is signed by a certificate authority that is untrusted or unknown.\n\"\r\n\"Affected asset:\n\",\"192.168.60.5\n\"\r\n\"Risk:\n\",\"May allow on-path attackers to insert a spoofed certificate for any distinguished name (DN).\n\"\r\n\"Reference:\n\",\"CVE-2021-1234, CVSS 8.1\n\"\r\n\"Title:\n\",\"Missing authentication\n\"\r\n\"Description:\n\",\"Missing authentication allows attacker to log into database server using privileged account.\n\"\r\n\"Affected asset:\n\",\"192.168.60.5\n\"\r\n\"Risk:\n\n\nReference:\n\",\"May allow privileged access to sensitive data.\n CVE-2022-0566, CVSS 5.1\n\"\n\nOutput\n\nVulnerability remediation timeframes\n\nEnvironmetit\n\n\"CVSS risk level\n\",\"Standard\n\",\"PROD\n\",\"Applies\n\n\nUAT\n\",\"to\n\",\"DEV\n\"\r\n\"$CVSS>9.0$\n\",\"Must be patched or remediated and verified by a subsequent\n vulnerability scan within 7 calendar days\n\",\"☑\n\",\"☑\n\",,\"X\n\"\r\n\"$CVSS>7.9<9.0$\n\",\"Must be patched or remediated and verified by a subsequent\n vulnerability scan within 14 calendar days\n\",\"☑\n\",\"X\n\",,\"X\n\"\r\n\"$CVSS>5.0<7.9$\n\",\"Must be patched or remediated and verified by a subsequent\n vulnerability scan within 30 calendar days\n\",\"☑\n\",\"X\n\",,\"x\n\"\r\n\"$CVSS>0<5.0$\n\",\"Must be patched or remediated and verified by a subsequent\n vulnerability scan within 60 calendar days\n\",,\"X\n\",,\"X\n\"\n\nAny of these timeframes may be accelerated at the discretion of the Chief Information Security Officer (CISO).\n  If patching cannot be completed or a vendor has not made a patch available within the timeframe in the table outlined\n above, compensating controls must be put in place within the timeframes listed above and the exception process must be\n followed.\n\nIf a patch requires a reboot for installation, the reboot must occur within the timeframes outlined above.\n All mitigations must be tested in the lower environments before being promoted to production\n Appropriate risk management processes should be considered when an applicable timeframe is not required for an\n environment.\n\nSelect the server to be patched\n\nSelect the appropriate technique and mitigation:\n\nwithin 14 calendar days:\n\n☐ 192.168.76.5\n ☐\n\n☐\n ☐\n\n192.168.76.6\n\n192.168.50.6\n\n192.168.50.5\n\n☐ ☐ 192.168.60.5 192.168.60.6\n\nSelect\n\nPatch; issue a CRL for the server to the CA\n Patch; upload signed certificate from trusted third-party provider\n Compensating control; implement MFA on the application\n Patch; upgrade IIS to current release\n\nRequest exception; legacy protocol could have operational impact\n Compensating control; implement secure session tokens\n\nCompensating control; create new ACL on firewall to block port 443\n Request exception; organization needs time to procure a PKI\n\nCorrect Answer:\n\nSelect the server to be patched\n\nwithin 14 calendar days:\n\n☐ 192.168.76.5\n\n☐ 192.168.76.6\n\nSelect\n\n☐ 192.168.50.5\n\n☐ 192.168.50.6\n\n☐ ☐ 192.168.60.5 192.168.60.6\n\nPatch; issue a CRL for the server to the CA\n Patch; upload signed certificate from trusted third-party provider\n Compensating control; implement MFA on the application\n\nPatch; upgrade IIS to current release\n\nRequest exception; legacy protocol could have operational impact\n Compensating control; implement secure session tokens\n\nCompensating control; create new ACL on firewall to block port 443\n Request exception; organization needs time to procure a PKI",
+    "image": null,
+    "options": {},
+    "correct_answer": null
+  },
+  {
+    "question_number": "414",
+    "question_text": "A security analyst provides the management team with an after action report for a security incident. Which of the following is the management team most likely to review in order to correct validated issues with the incident response processes?",
+    "image": null,
+    "options": {
+      "A": "Tabletop exercise",
+      "B": "Lessons learned",
+      "C": "Root cause analysis",
+      "D": "Forensic analysis"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": "415",
+    "question_text": "A security analyst needs to prioritize vulnerabilities for patching. Given the following vulnerability and system information:\n\n\"System.\n\",\"Sensitive Internet\n data? facing?\n\",,\"Vulnerability score\n\"\r\n\"1\n\",\"no\n\",\"yes\n\",\"AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:H\n\"\r\n\"2\n\",\"no\n\",\"no\n\",\"AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:H\n\"\r\n\"3\n\",\"yes\n\",\"yes\n\",\"AV:P/AC:H/PR:H/UI:R/S:U/C:N/I:N/A:L\n\"\r\n\"4\n\",\"no\n\",\"yes\n\",\"AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:L/A:H\n\"\r\n\"5\n\",\"yes\n\",\"yes\n\",\"AV:L/AC:H/PR:H/UI:R/S:U/C:L/I:N/A:N\n\"\r\n\"6\n\",\"no\n\",\"no\n\",\"AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:H\n\"\n\nWhich of the following systems should the analyst patch?",
+    "image": null,
+    "options": {
+      "A": "1",
+      "B": "2",
+      "C": "3",
+      "D": "4",
+      "E": "5",
+      "F": "6"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": "416",
+    "question_text": "During a packet capture review, a security analyst identifies the output below as suspicious:\n\n$11:27:23.056012$ eth0 Out IP 10.203.10.23.6666 > 185.142.238.69.1611: UDP, length 14\n $0\\times0000$: 4500 002a 728a 4000 4011 0b83 0acb 0a17 E..*r.@. ....\n\n$0\\times0010$: b98e ee45 la0a 064b 0016 bcdd 7069 6e67E...K....ping\n $0\\times0020:$ 2064 4746 7a61 776f 3d0a.dGFzawo-.\n\n11:27:54.066305 eth0 Out IP 10.203.10.23.6666> 185.142.238.69.1611: UDP, length 14\n $0\\times0000$ 4500 002a 7e67 4000 4011 ffa5 0acb 0a17 E..*~g@.@.......\n $0\\times0010$: b98e ee45 la0a 064c 0016 bcdd 7069 6e67E...L....ping\n $0\\times0020;$ 2064 4746 7a61 776f 3d0a.dGFzawo-.\n\n$11:28:2$ 25.084414 eth0 Out IP 10.203.10.23.6666> 185.142.238.69.1611: UDP, length 14\n\n$0\\times0000$: 4500 002a a86e 4000 4011 d59e 0acb 0a17 E..*.n@.@.......\n $0\\times0010$: b98e ee45 la0a 064d 0016 bcdd 7069 6e67 EM....ping\n $0\\times0020$: 2064 4746 7a61 776f 3d0a.dGFzawo-.\n\n$11:28:56$ 56.092139 eth0 Out IP 10.203.10.23.6666> 185.142.238.69.1611: UDP, length 14\n $0\\times0000$: 4500 002a 261a 4000 4011 57 3 0ach 0a17 E..*&.@.@.......\n\n$0\\times0010;$ b98e ee45 la0a 064e 0016 bcdd 7069 6e67\n $0\\times0020$: 2064 4746 7a61 776f 3d0a.dGFzawo=. \n\nWhich of the following best describes the type of activity the analyst has identified?",
+    "image": null,
+    "options": {
+      "A": "Ping sweep",
+      "B": "Port scan",
+      "C": "DoS attack",
+      "D": "Beaconing  "
+    },
+    "correct_answer": "D"
+  }
+]

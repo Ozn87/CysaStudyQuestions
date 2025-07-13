@@ -1,0 +1,331 @@
+[
+  {
+    "question_number": "1",
+    "question_text": "A recent zero-day vulnerability is being actively exploited, requires no user interaction or privilege escalation, and has a significant impact to confidentiality and integrity but not to availability. Which of the following CVE metrics would be most accurate for this zero-day threat?",
+    "image": null,
+    "options": {
+      "A": "CVSS:31/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:K/A:L  ",
+      "B": "CVSS:31/AV:K/AC:L/PR:H/UI:R/S:C/C:H/I:H/A:L",
+      "C": "CVSS:31/AV:N/AC:L/PR:N/UI:H/S:U/C:L/I:N/A:H",
+      "D": "CVSS:31/AV:L/AC:L/PR:R/UI:R/S:U/C:H/I:L/A:H"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": "2",
+    "question_text": "Which of the following tools would work best to prevent the exposure of Pll outside of an organization?",
+    "image": null,
+    "options": {
+      "A": "PAM",
+      "B": "IDS",
+      "C": "PKI",
+      "D": "DLP  "
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": "3",
+    "question_text": "An organization conducted a web application vulnerability assessment against the corporate website, and the following output was observed:\n\nAlerts (17)\n\nAbsence of Anti-CSRF Tokens\n\n>Content Security Policy (CSP) Header Not Set (6)\n\nCross-Domain Miscorifiguration (34)\n\nDirectory Browsing (11)\n\nMissing Anti-clickjacking Header (2)\n\nCockle No HttpOnly Flag (4)\n\nCookie Without Secure Flag\n\nCookle with SameSite Attribute None (2)\n\nCockie without SameSite Attribute (5)\n\nCross-Domain JavaScript Source File Inclusion\n\n>Timestamp Disclosure Unix (569)\n\nX-Content-Type-Options Header Missing (42)\n CORS Header\n\nInformation Disclosure Sensitive Information in URL (2)\n\nInformation Disclosure Suspicious Comments (43)\n\nLoosely Scoped Cookie (5)\n\nRe-examine Cache-control Directives (33)\n\nWhich of the following tuning recommendations should the security analyst share?",
+    "image": null,
+    "options": {
+      "A": "Set an HttpOnly flag to force communication by HTTPS",
+      "B": "Block requests without an X-Frame-Options header",
+      "C": "Configure an Access-Control-Allow-Origin header to authorized domains  ",
+      "D": "Disable the cross-origin resource sharing header"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": "4",
+    "question_text": "Which of the following items should be included in a vulnerability scan report? (Choose two.)",
+    "image": null,
+    "options": {
+      "A": "Lessons learned",
+      "B": "Service-level agreement",
+      "C": "Playbook",
+      "D": "Affected hosts  ",
+      "E": "Risk score  ",
+      "F": "Education plan"
+    },
+    "correct_answer": "DE"
+  },
+  {
+    "question_number": "5",
+    "question_text": "The Chief Executive Officer of an organization recently heard that exploitation of new attacks in the industry was happening approximately 45 days after a patch was released. Which of the following would best protect this organization?",
+    "image": null,
+    "options": {
+      "A": "A mean time to remediate of 30 days  ",
+      "B": "A mean time to detect of 45 days",
+      "C": "A mean time to respond of 15 days",
+      "D": "Third-party application testing"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": "6",
+    "question_text": "A security analyst recently joined the team and is trying to determine which scripting language is being used in a production script to determine if it is malicious. Given the following script:\n\nforeach (Suser in Get-Content \\this.txt)\n\n1\n\nGet-ADUser Suser Properties primaryGroupID  select-object primaryGroupIn\n\nAdd-AnGroupMember \"Domain Users\" Members Suser\n\nSet-ADUser Suser Replace (primaryGroupID 513)\n\nWhich of the following scripting languages was used in the script?",
+    "image": null,
+    "options": {
+      "A": "PowerShell  ",
+      "B": "Ruby",
+      "C": "Python",
+      "D": "Shell script"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": "7",
+    "question_text": "A company's user accounts have been compromised. Users are also reporting that the company's internal portal is sometimes only accessible through HTTP, other times; it is accessible through HTTPS. Which of the following most likely describes the observed activity?",
+    "image": null,
+    "options": {
+      "A": "There is an issue with the SSL certificate causing port 443 to become unavailable for HTTPS access",
+      "B": "An on-path attack is being performed by someone with internal access that forces users into port 80  ",
+      "C": "The web server cannot handle an increasing amount of HTTPS requests so it forwards users to port 80",
+      "D": "An error was caused by BGP due to new rules applied over the company's internal routers"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": "8",
+    "question_text": "A security analyst is tasked with prioritizing vulnerabilities for remediation. The relevant company security policies are shown below:\n Security Policy 1006: Vulnerability Management\n\n1. The Company shall use the CVSSv3.1 Base Score Metrics (Exploitability and Impact) to prioritize the remediation of security vulnerabilities.\n 2. In situations where a choice must be made between confidentiality and availability, the Company shall prioritize confidentiality of data over\n availability of systems and data.\n\n3. The Company shall prioritize patching of publicly available systems and services over patching of internally available system.\n According to the security policy, which of the following vulnerabilities should be the highest priority to patch?",
+    "image": null,
+    "options": {
+      "A": "Name: THOR.HAMMER -\n\nCVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H\n\nInternal System",
+      "B": "Name: CAP.SHIELD -\n\nCVSS 3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N\n\nExternal System  ",
+      "C": "Name: LOKI.DAGGER -\n\nCVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H\n External System",
+      "D": "Name: THANOS.GAUNTLET -\n\nCVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N\n Internal System"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": "9",
+    "question_text": "Which of the following will most likely ensure that mission-critical services are available in the event of an incident?",
+    "image": null,
+    "options": {
+      "A": "Business continuity plan  ",
+      "B": "Vulnerability management plan",
+      "C": "Disaster recovery plan",
+      "D": "Asset management plan"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": "10",
+    "question_text": "The Chief Information Security Officer wants to eliminate and reduce shadow IT in the enterprise. Several high-risk cloud applications are used that increase the risk to the organization. Which of the following solutions will assist in reducing the risk?",
+    "image": null,
+    "options": {
+      "A": "Deploy a CASB and enable policy enforcement  ",
+      "B": "Configure MFA with strict access",
+      "C": "Deploy an API gateway",
+      "D": "Enable SSO to the cloud applications"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": "11",
+    "question_text": "An incident response team receives an alert to start an investigation of an internet outage. The outage is preventing all users in multiple locations from accessing external SaaS resources. The team determines the organization was impacted by a DDoS attack. Which of the following logs should the team review first?",
+    "image": null,
+    "options": {
+      "A": "CDN",
+      "B": "Vulnerability scanner",
+      "C": "DNS  ",
+      "D": "Web server"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": "12",
+    "question_text": "A malicious actor has gained access to an internal network by means of social engineering. The actor does not want to lose access in order to continue the attack. Which of the following best describes the current stage of the Cyber Kill Chain that the threat actor is currently operating in?",
+    "image": null,
+    "options": {
+      "A": "Weaponization",
+      "B": "Reconnaissance",
+      "C": "Delivery",
+      "D": "Exploitation  "
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": "13",
+    "question_text": "An analyst finds that an IP address outside of the company network that is being used to run network and vulnerability scans across external- facing assets. Which of the following steps of an attack framework is the analyst witnessing?",
+    "image": null,
+    "options": {
+      "A": "Exploitation",
+      "B": "Reconnaissance  ",
+      "C": "Command and control",
+      "D": "Actions on objectives"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": "14",
+    "question_text": "An incident response analyst notices multiple emails traversing the network that target only the administrators of the company. The email contains a concealed URL that leads to an unknown website in another country. Which of the following best describes what is happening? (Choose two.)",
+    "image": null,
+    "options": {
+      "A": "Beaconing",
+      "B": "Domain Name System hijacking",
+      "C": "Social engineering attack  ",
+      "D": "On-path attack",
+      "E": "Obfuscated links  ",
+      "F": "Address Resolution Protocol poisoning"
+    },
+    "correct_answer": "CE"
+  },
+  {
+    "question_number": "15",
+    "question_text": "During security scanning, a security analyst regularly finds the same vulnerabilities in a critical application. Which of the following recommendations would best mitigate this problem if applied along the SDLC phase?",
+    "image": null,
+    "options": {
+      "A": "Conduct regular red team exercises over the application in production",
+      "B": "Ensure that all implemented coding libraries are regularly checked",
+      "C": "Use application security scanning as part of the pipeline for the $Cl/CD$ flow  ",
+      "D": "Implement proper input validation for any data entry form"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": "16",
+    "question_text": "An analyst is reviewing a vulnerability report and must make recommendations to the executive team. The analyst finds that most systems can be upgraded with a reboot resulting in a single downtime window. However, two of the critical systems cannot be upgraded due to a vendor appliance that the company does not have access to. Which of the following inhibitors to remediation do these systems and associated vulnerabilities best represent?",
+    "image": null,
+    "options": {
+      "A": "Proprietary systems  ",
+      "B": "Legacy systems",
+      "C": "Unsupported operating systems",
+      "D": "Lack of maintenance windows"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": "17",
+    "question_text": "The security team reviews a web server for XSS and runs the following Nmap scan:\n Inmap -p80 --script http-unsafe-cutput-escaping 172.31.15.2\n\nPORT\n\n50/tcp\n\nSTATE\n open\n\nSERVICE REASON\n\nhttp\n\nsyn-ack\n\n http-unsafe-output-escaping:\n\nCharacters [>\" ] reflected in parameter id at\n\nhttp://172.31.15.2/1.php?id=2\n\nWhich of the following most accurately describes the result of the scan?",
+    "image": null,
+    "options": {
+      "A": "An output of characters > and \" as the parameters used m the attempt",
+      "B": "The vulnerable parameter ID http://172.31.15.2/1.php?id-2 and unfiltered characters returned",
+      "C": "The vulnerable parameter and unfiltered or encoded characters passed > and \" as unsafe",
+      "D": "The vulnerable parameter and characters > and \" with a reflected XSS attempt  "
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": "18",
+    "question_text": "Which of the following is the best action to take after the conclusion of a security incident to improve incident response in the future?",
+    "image": null,
+    "options": {
+      "A": "Develop a call tree to inform impacted users",
+      "B": "Schedule a review with all teams to discuss what occurred  ",
+      "C": "Create an executive summary to update company leadership",
+      "D": "Review regulatory compliance with public relations for official notification"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": "19",
+    "question_text": "A security analyst received a malicious binary file to analyze. Which of the following is the best technique to perform the analysis?",
+    "image": null,
+    "options": {
+      "A": "Code analysis",
+      "B": "Static analysis",
+      "C": "Reverse engineering  ",
+      "D": "Fuzzing"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": "20",
+    "question_text": "An incident response team found loCs in a critical server. The team needs to isolate and collect technical evidence for further investigation. Which of the following pieces of data should be collected first in order to preserve sensitive information before isolating the server?",
+    "image": null,
+    "options": {
+      "A": "Hard disk",
+      "B": "Primary boot partition",
+      "C": "Malicious files",
+      "D": "Routing table  ",
+      "E": "Static IP address"
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": "21",
+    "question_text": "Which of the following security operations tasks are ideal for automation?",
+    "image": null,
+    "options": {
+      "A": "Suspicious file analysis:\n\nLook for suspicious-looking graphics in a folder.\n\nCreate subfolders in the original folder based on category of graphics found.\n\nMove the suspicious graphics to the appropriate subfolder",
+      "B": "Firewall loC block actions:\n\nExamine the firewall logs for loCs from the most recently published zero-day exploit\n\nTake mitigating actions in the firewall to block the behavior found in the logs\n\nFollow up on any false positives that were caused by the block rules",
+      "C": "Security application user errors:\n\nSearch the error logs for signs of users having trouble with the security application\n\nLook up the user's phone number -\n\nCall the user to help with any questions about using the application",
+      "D": "Email header analysis:\n\nCheck the email header for a phishing confidence metric greater than or equal to five\n\nAdd the domain of sender to the block list\n\nMove the email to quarantine  "
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": "22",
+    "question_text": "An organization has experienced a breach of customer transactions. Under the terms of PCI DSS, which of the following groups should the organization report the breach to?",
+    "image": null,
+    "options": {
+      "A": "PCI Security Standards Council",
+      "B": "Local law enforcement",
+      "C": "Federal law enforcement",
+      "D": "Card issuer  "
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": "23",
+    "question_text": "Which of the following is the best metric for an organization to focus on given recent investments in SIEM, SOAR, and a ticketing system?",
+    "image": null,
+    "options": {
+      "A": "Mean time to detect  ",
+      "B": "Number of exploits by tactic",
+      "C": "Alert volume",
+      "D": "Quantity of intrusion attempts"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": "24",
+    "question_text": "A company is implementing a vulnerability management program and moving from an on-premises environment to a hybrid laas cloud environment. Which of the following implications should be considered on the new hybrid environment?",
+    "image": null,
+    "options": {
+      "A": "The current scanners should be migrated to the cloud",
+      "B": "Cloud-specific misconfigurations may not be detected by the current scanners  ",
+      "C": "Existing vulnerability scanners cannot scan laaS systems",
+      "D": "Vulnerability scans on cloud environments should be performed from the cloud"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": "25",
+    "question_text": "A security alert was triggered when an end user tried to access a website that is not allowed per organizational policy. Since the action is considered a terminable offense, the SOC analyst collects the authentication logs, web logs, and temporary files, reflecting the web searches from the user's workstation, to build the case for the investigation. Which of the following is the best way to ensure that the investigation complies with HR or privacy policies?",
+    "image": null,
+    "options": {
+      "A": "Create a timeline of events detailing the date stamps, user account hostname and IP information associated with the activities",
+      "B": "Ensure that the case details do not reflect any user-identifiable information Password protect the evidence and restrict access to personnel related to the investigation  ",
+      "C": "Create a code name for the investigation in the ticketing system so that all personnel with access will not be able to easily identify the case as an HR-related investigation",
+      "D": "Notify the SOC manager for awareness after confirmation that the activity was intentional"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": "26",
+    "question_text": "Which of the following is the first step that should be performed when establishing a disaster recovery plan?",
+    "image": null,
+    "options": {
+      "A": "Agree on the goals and objectives of the plan  ",
+      "B": "Determine the site to be used during a disaster",
+      "C": "Demonstrate adherence to a standard disaster recovery process",
+      "D": "Identify applications to be run during a disaster"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": "27",
+    "question_text": "A technician identifies a vulnerability on a server and applies a software patch. Which of the following should be the next step in the remediation process?",
+    "image": null,
+    "options": {
+      "A": "Testing",
+      "B": "Implementation",
+      "C": "Validation  ",
+      "D": "Rollback"
+    },
+    "correct_answer": "C"
+  }
+]
