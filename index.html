@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CompTIA CySA+ Study Tool</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      /* Custom styles for better UI/UX */
+      .card {
+        background-color: white;
+        border-radius: 0.75rem;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+          0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease-in-out;
+      }
+      .btn {
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.5rem;
+        font-weight: 600;
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+        text-align: center;
+      }
+      .btn-primary {
+        background-color: #4f46e5;
+        color: white;
+      }
+      .btn-primary:hover {
+        background-color: #4338ca;
+      }
+      .btn-secondary {
+        background-color: #e5e7eb;
+        color: #374151;
+      }
+      .btn-secondary:hover {
+        background-color: #d1d5db;
+      }
+      .hidden {
+        display: none;
+      }
+      .option-label {
+        display: block;
+        padding: 1rem;
+        border: 1px solid #d1d5db;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+      }
+      .option-label:hover {
+        background-color: #f3f4f6;
+      }
+      input[type='radio']:checked + .option-label {
+        border-color: #4f46e5;
+        background-color: #e0e7ff;
+      }
+      .correct {
+        border-color: #10b981 !important;
+        background-color: #d1fae5 !important;
+      }
+      .incorrect {
+        border-color: #ef4444 !important;
+        background-color: #fee2e2 !important;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-gray-100 text-gray-800 flex items-center justify-center min-h-screen p-4"
+  >
+    <div id="app-container" class="w-full max-w-4xl mx-auto">
+      <!-- Loading State -->
+      <div id="loading-view" class="card p-8 text-center">
+        <h1 class="text-2xl font-bold mb-4">Loading Questions...</h1>
+        <p class="text-gray-600">
+          Please wait a moment while we prepare the study material.
+        </p>
+        <div class="mt-6">
+          <div
+            class="animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-600 mx-auto"
+          ></div>
+        </div>
+      </div>
+
+      <!-- Mode Selection View -->
+      <div id="mode-selection-view" class="card p-8 text-center hidden">
+        <h1 class="text-2xl font-bold mb-2">CompTIA CySA+ Study Tool</h1>
+        <p class="text-gray-600 mb-8">Choose your mode to get started.</p>
+        <div class="flex flex-col md:flex-row gap-4 justify-center">
+          <button
+            id="start-study-mode"
+            class="btn btn-primary w-full md:w-auto"
+          >
+            Study Mode
+          </button>
+          <button
+            id="start-quiz-mode"
+            class="btn btn-secondary w-full md:w-auto"
+          >
+            Quiz Mode
+          </button>
+        </div>
+      </div>
+
+      <!-- Study Mode View -->
+      <div id="study-view" class="card p-8 hidden">
+        <div class="flex justify-between items-center mb-6">
+          <h2 class="text-xl font-bold">Study Mode</h2>
+          <button id="study-back-to-menu" class="btn btn-secondary">
+            Menu
+          </button>
+        </div>
+        <div id="study-question-container" class="mb-6">
+          <p class="text-gray-600 mb-2 font-semibold">
+            Question <span id="study-question-number"></span> of
+            <span id="study-total-questions"></span>
+          </p>
+          <p id="study-question-text" class="text-lg mb-4"></p>
+          <div id="study-options-container" class="space-y-3"></div>
+        </div>
+        <div
+          id="study-answer-container"
+          class="hidden p-4 bg-indigo-50 border border-indigo-200 rounded-lg"
+        >
+          <p class="font-bold">
+            Correct Answer: <span id="study-correct-answer"></span>
+          </p>
+          <p id="study-answer-explanation" class="mt-2 text-sm text-gray-700">
+            Note: The correct answer is highlighted above.
+          </p>
+        </div>
+        <div
+          class="mt-6 flex flex-col md:flex-row items-center justify-between gap-4"
+        >
+          <div class="flex gap-2">
+            <button id="study-prev-btn" class="btn btn-secondary">
+              Previous
+            </button>
+            <button id="study-next-btn" class="btn btn-secondary">Next</button>
+            <button id="study-show-answer-btn" class="btn btn-primary">
+              Show Answer
+            </button>
+          </div>
+          <div class="flex items-center gap-2">
+            <input
+              type="number"
+              id="study-goto-input"
+              class="border rounded-md px-3 py-2 w-24 text-center"
+              placeholder="Go to..."
+            />
+            <button id="study-goto-btn" class="btn btn-secondary">Go</button>
+          </div>
+        </div>
+        <div class="mt-4 text-center">
+          <button id="study-resume-btn" class="btn btn-primary">
+            Resume From Last Session
+          </button>
+        </div>
+      </div>
+
+      <!-- Quiz Mode Setup View -->
+      <div id="quiz-setup-view" class="card p-8 text-center hidden">
+        <h2 class="text-xl font-bold mb-4">Quiz Setup</h2>
+        <p class="text-gray-600 mb-6">
+          How many questions would you like in your quiz?
+        </p>
+        <div class="flex flex-col md:flex-row gap-4 justify-center">
+          <button class="quiz-size-btn btn btn-primary" data-size="10">
+            10 Questions
+          </button>
+          <button class="quiz-size-btn btn btn-primary" data-size="15">
+            15 Questions
+          </button>
+          <button class="quiz-size-btn btn btn-primary" data-size="20">
+            20 Questions
+          </button>
+        </div>
+        <button id="quiz-setup-back-to-menu" class="mt-8 btn btn-secondary">
+          Back to Menu
+        </button>
+      </div>
+
+      <!-- Quiz Active View -->
+      <div id="quiz-view" class="card p-8 hidden">
+        <div class="flex justify-between items-center mb-6">
+          <h2 class="text-xl font-bold">Quiz Mode</h2>
+          <p class="font-semibold">
+            Question <span id="quiz-question-number"></span> of
+            <span id="quiz-total-questions"></span>
+          </p>
+        </div>
+        <div id="quiz-question-container" class="mb-6">
+          <p id="quiz-question-text" class="text-lg mb-4"></p>
+          <div id="quiz-options-container" class="space-y-3"></div>
+        </div>
+        <div class="flex justify-between">
+          <button id="quiz-back-to-menu" class="btn btn-secondary">Menu</button>
+          <button id="quiz-submit-btn" class="btn btn-primary">
+            Submit Quiz
+          </button>
+        </div>
+      </div>
+
+      <!-- Quiz Results View -->
+      <div id="results-view" class="card p-8 hidden">
+        <h2 class="text-2xl font-bold text-center mb-4">Quiz Results</h2>
+        <p
+          id="results-score"
+          class="text-xl text-center font-semibold mb-8"
+        ></p>
+        <div id="results-summary-container" class="space-y-6"></div>
+        <div class="text-center mt-8">
+          <button id="results-back-to-menu" class="btn btn-primary">
+            Back to Menu
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // --- DOM Elements ---
+        const loadingView = document.getElementById('loading-view')
+        const modeSelectionView = document.getElementById('mode-selection-view')
+        const studyView = document.getElementById('study-view')
+        const quizSetupView = document.getElementById('quiz-setup-view')
+        const quizView = document.getElementById('quiz-view')
+        const resultsView = document.getElementById('results-view')
+
+        // --- State Variables ---
+        let allQuestions = []
+        let currentStudyIndex = 0
+        let currentQuiz = []
+        let userAnswers = {}
+
+        // --- File Configuration ---
+        // List of your JSON files. Assumes they are in a 'json_questions' subfolder.
+        const questionFiles = [
+          '1_27.json',
+          '29_50.json',
+          '51_100.json',
+          '101_150.json',
+          '151_200.json',
+          '201_250.json',
+          '251_300.json',
+          '301_350.json',
+          '351_400.json',
+          '401_416.json',
+        ]
+
+        // --- Utility Functions ---
+        const shuffleArray = (array) => {
+          for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1))
+            ;[array[i], array[j]] = [array[j], array[i]]
+          }
+          return array
+        }
+
+        const showView = (view) => {
+          ;[
+            loadingView,
+            modeSelectionView,
+            studyView,
+            quizSetupView,
+            quizView,
+            resultsView,
+          ].forEach((v) => v.classList.add('hidden'))
+          view.classList.remove('hidden')
+        }
+
+        // --- Data Loading ---
+        const loadAllQuestions = async () => {
+          try {
+            const fetchPromises = questionFiles.map((file) =>
+              fetch(`./json_questions/${file}`).then((res) => res.json())
+            )
+            const questionSets = await Promise.all(fetchPromises)
+            allQuestions = questionSets
+              .flat()
+              .sort(
+                (a, b) =>
+                  parseInt(a.question_number) - parseInt(b.question_number)
+              )
+
+            // Assign a unique index to each question for easy navigation
+            allQuestions.forEach((q, index) => (q.id = index))
+
+            document.getElementById('study-total-questions').textContent =
+              allQuestions.length
+            showView(modeSelectionView)
+          } catch (error) {
+            console.error('Error loading question files:', error)
+            loadingView.innerHTML = `<div class="card p-8 text-center text-red-600">
+                        <h1 class="text-2xl font-bold mb-4">Error Loading Questions</h1>
+                        <p>Could not load the study material. Please ensure the 'json_questions' folder exists and contains the correct files. Check the browser console for more details.</p>
+                    </div>`
+          }
+        }
+
+        // --- Study Mode Logic ---
+        const renderStudyQuestion = (index) => {
+          if (index < 0 || index >= allQuestions.length) return
+          currentStudyIndex = index
+          localStorage.setItem('lastStudyIndex', currentStudyIndex) // Save progress
+
+          const question = allQuestions[index]
+          document.getElementById('study-question-number').textContent =
+            index + 1
+          document.getElementById('study-question-text').textContent =
+            question.question_text
+
+          const optionsContainer = document.getElementById(
+            'study-options-container'
+          )
+          optionsContainer.innerHTML = ''
+
+          Object.entries(question.options).forEach(([key, value]) => {
+            const optionDiv = document.createElement('div')
+            optionDiv.className = 'p-4 border rounded-lg'
+            if (key === question.correct_answer) {
+              optionDiv.dataset.correct = 'true'
+            }
+            optionDiv.innerHTML = `<span class="font-bold mr-2">${key}.</span> ${value}`
+            optionsContainer.appendChild(optionDiv)
+          })
+
+          document
+            .getElementById('study-answer-container')
+            .classList.add('hidden')
+          document.getElementById('study-show-answer-btn').disabled = false
+        }
+
+        const showStudyAnswer = () => {
+          const question = allQuestions[currentStudyIndex]
+          document.getElementById('study-correct-answer').textContent = `${
+            question.correct_answer
+          }. ${question.options[question.correct_answer]}`
+          document
+            .getElementById('study-answer-container')
+            .classList.remove('hidden')
+
+          // Highlight the correct option
+          document
+            .querySelectorAll('#study-options-container > div')
+            .forEach((div) => {
+              if (div.dataset.correct === 'true') {
+                div.classList.add('correct')
+              }
+            })
+          document.getElementById('study-show-answer-btn').disabled = true
+        }
+
+        // --- Quiz Mode Logic ---
+        const startQuiz = (size) => {
+          const shuffled = shuffleArray([...allQuestions])
+          currentQuiz = shuffled.slice(0, size)
+          userAnswers = {}
+          renderQuizQuestion(0)
+          showView(quizView)
+        }
+
+        const renderQuizQuestion = (index) => {
+          if (index >= currentQuiz.length) {
+            submitQuiz()
+            return
+          }
+
+          const question = currentQuiz[index]
+          document.getElementById('quiz-question-number').textContent =
+            index + 1
+          document.getElementById('quiz-total-questions').textContent =
+            currentQuiz.length
+          document.getElementById('quiz-question-text').textContent =
+            question.question_text
+
+          const optionsContainer = document.getElementById(
+            'quiz-options-container'
+          )
+          optionsContainer.innerHTML = ''
+
+          // Shuffle options for the quiz
+          const options = shuffleArray(Object.entries(question.options))
+
+          options.forEach(([key, value]) => {
+            const optionId = `q${index}_${key}`
+            const wrapper = document.createElement('div')
+            wrapper.innerHTML = `
+                        <input type="radio" name="quiz_question_${index}" id="${optionId}" value="${key}" class="hidden">
+                        <label for="${optionId}" class="option-label">
+                            <span class="font-bold mr-2">${key}.</span> ${value}
+                        </label>
+                    `
+            wrapper.querySelector('input').addEventListener('change', () => {
+              userAnswers[index] = key
+              // Automatically move to the next question
+              setTimeout(() => renderQuizQuestion(index + 1), 300)
+            })
+            optionsContainer.appendChild(wrapper)
+          })
+
+          document
+            .getElementById('quiz-submit-btn')
+            .classList.toggle('hidden', index !== currentQuiz.length - 1)
+        }
+
+        const submitQuiz = () => {
+          let score = 0
+          const resultsContainer = document.getElementById(
+            'results-summary-container'
+          )
+          resultsContainer.innerHTML = ''
+
+          currentQuiz.forEach((question, index) => {
+            const userAnswer = userAnswers[index]
+            const isCorrect = userAnswer === question.correct_answer
+            if (isCorrect) {
+              score++
+            }
+
+            const resultDiv = document.createElement('div')
+            resultDiv.className = 'p-4 border rounded-lg'
+            resultDiv.innerHTML = `
+                        <p class="font-semibold mb-2">${index + 1}. ${
+              question.question_text
+            }</p>
+                        <p class="text-sm mb-1 ${
+                          isCorrect ? 'text-green-600' : 'text-red-600'
+                        }">
+                            Your answer: ${
+                              userAnswer
+                                ? `${userAnswer}. ${question.options[userAnswer]}`
+                                : 'Not answered'
+                            }
+                            ${isCorrect ? ' (Correct)' : ' (Incorrect)'}
+                        </p>
+                        ${
+                          !isCorrect
+                            ? `<p class="text-sm text-green-700">Correct answer: ${
+                                question.correct_answer
+                              }. ${
+                                question.options[question.correct_answer]
+                              }</p>`
+                            : ''
+                        }
+                    `
+            resultsContainer.appendChild(resultDiv)
+          })
+
+          document.getElementById(
+            'results-score'
+          ).textContent = `You scored ${score} out of ${currentQuiz.length}!`
+          showView(resultsView)
+        }
+
+        // --- Event Listeners ---
+        document
+          .getElementById('start-study-mode')
+          .addEventListener('click', () => {
+            renderStudyQuestion(currentStudyIndex)
+            showView(studyView)
+          })
+
+        document
+          .getElementById('start-quiz-mode')
+          .addEventListener('click', () => showView(quizSetupView))
+
+        // Back to Menu Buttons
+        ;[
+          'study-back-to-menu',
+          'quiz-setup-back-to-menu',
+          'quiz-back-to-menu',
+          'results-back-to-menu',
+        ].forEach((id) => {
+          document
+            .getElementById(id)
+            .addEventListener('click', () => showView(modeSelectionView))
+        })
+
+        // Study Mode Controls
+        document
+          .getElementById('study-prev-btn')
+          .addEventListener('click', () =>
+            renderStudyQuestion(currentStudyIndex - 1)
+          )
+        document
+          .getElementById('study-next-btn')
+          .addEventListener('click', () =>
+            renderStudyQuestion(currentStudyIndex + 1)
+          )
+        document
+          .getElementById('study-show-answer-btn')
+          .addEventListener('click', showStudyAnswer)
+        document
+          .getElementById('study-goto-btn')
+          .addEventListener('click', () => {
+            const num = parseInt(
+              document.getElementById('study-goto-input').value
+            )
+            if (!isNaN(num) && num > 0 && num <= allQuestions.length) {
+              renderStudyQuestion(num - 1)
+            }
+          })
+        document
+          .getElementById('study-resume-btn')
+          .addEventListener('click', () => {
+            const savedIndex =
+              parseInt(localStorage.getItem('lastStudyIndex')) || 0
+            renderStudyQuestion(savedIndex)
+          })
+
+        // Quiz Mode Controls
+        document.querySelectorAll('.quiz-size-btn').forEach((btn) => {
+          btn.addEventListener('click', (e) =>
+            startQuiz(parseInt(e.target.dataset.size))
+          )
+        })
+        document
+          .getElementById('quiz-submit-btn')
+          .addEventListener('click', submitQuiz)
+
+        // --- Initial Load ---
+        loadAllQuestions()
+      })
+    </script>
+  </body>
+</html>
