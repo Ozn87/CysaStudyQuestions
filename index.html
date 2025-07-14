@@ -28,39 +28,58 @@
         transition: all 0.2s ease-in-out;
         cursor: pointer;
         text-align: center;
+        border: 1px solid transparent;
+      }
+      .btn:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
       }
       .btn-primary {
         background-color: #4f46e5;
         color: white;
       }
-      .btn-primary:hover {
+      .btn-primary:hover:not(:disabled) {
         background-color: #4338ca;
       }
       .btn-secondary {
         background-color: #e5e7eb;
         color: #374151;
+        border-color: #d1d5db;
       }
-      .btn-secondary:hover {
+      .btn-secondary:hover:not(:disabled) {
         background-color: #d1d5db;
       }
       .hidden {
         display: none;
       }
       .option-label {
-        display: block;
+        display: flex;
+        align-items: flex-start;
+        text-align: left;
         padding: 1rem;
         border: 1px solid #d1d5db;
         border-radius: 0.5rem;
         cursor: pointer;
         transition: all 0.2s ease-in-out;
+        /* Added for text wrapping */
+        white-space: normal;
+        word-wrap: break-word;
       }
       .option-label:hover {
         background-color: #f3f4f6;
       }
-      input[type='radio']:checked + .option-label {
+      /* Style for user-selected options */
+      .selected {
+        border-color: #6366f1 !important;
+        background-color: #eef2ff !important;
+      }
+      /* Style for inputs being checked (Quiz Mode) */
+      input[type='radio']:checked + .option-label,
+      input[type='checkbox']:checked + .option-label {
         border-color: #4f46e5;
         background-color: #e0e7ff;
       }
+      /* Style for revealing correct/incorrect answers */
       .correct {
         border-color: #10b981 !important;
         background-color: #d1fae5 !important;
@@ -129,11 +148,12 @@
           class="hidden p-4 bg-indigo-50 border border-indigo-200 rounded-lg"
         >
           <p class="font-bold">
-            Correct Answer: <span id="study-correct-answer"></span>
+            Correct Answer(s): <span id="study-correct-answer"></span>
           </p>
-          <p id="study-answer-explanation" class="mt-2 text-sm text-gray-700">
-            Note: The correct answer is highlighted above.
-          </p>
+          <p
+            id="study-answer-explanation"
+            class="mt-2 text-sm text-gray-700"
+          ></p>
         </div>
         <div
           class="mt-6 flex flex-col md:flex-row items-center justify-between gap-4"
@@ -199,11 +219,17 @@
           <p id="quiz-question-text" class="text-lg mb-4"></p>
           <div id="quiz-options-container" class="space-y-3"></div>
         </div>
-        <div class="flex justify-between">
+        <div class="flex justify-between mt-6">
           <button id="quiz-back-to-menu" class="btn btn-secondary">Menu</button>
-          <button id="quiz-submit-btn" class="btn btn-primary">
-            Submit Quiz
-          </button>
+          <div class="flex gap-2">
+            <button id="quiz-prev-btn" class="btn btn-secondary">
+              Previous
+            </button>
+            <button id="quiz-next-btn" class="btn btn-primary">Next</button>
+            <button id="quiz-submit-btn" class="btn btn-primary hidden">
+              Submit Quiz
+            </button>
+          </div>
         </div>
       </div>
 
@@ -237,10 +263,10 @@
         let allQuestions = []
         let currentStudyIndex = 0
         let currentQuiz = []
-        let userAnswers = {}
+        let currentQuizIndex = 0
+        let userQuizAnswers = {}
 
         // --- File Configuration ---
-        // List of your JSON files. Assumes they are in a 'json_questions' subfolder.
         const questionFiles = [
           '1_27.json',
           '29_50.json',
@@ -308,7 +334,7 @@
         const renderStudyQuestion = (index) => {
           if (index < 0 || index >= allQuestions.length) return
           currentStudyIndex = index
-          localStorage.setItem('lastStudyIndex', currentStudyIndex) // Save progress
+          localStorage.setItem('lastStudyIndex', currentStudyIndex)
 
           const question = allQuestions[index]
           document.getElementById('study-question-number').textContent =
@@ -321,13 +347,43 @@
           )
           optionsContainer.innerHTML = ''
 
-          Object.entries(question.options).forEach(([key, value]) => {
+          const correctAnswers = question.correct_answer
+            .split(',')
+            .map((s) => s.trim())
+          const isMultiAnswer = correctAnswers.length > 1
+
+          if (isMultiAnswer) {
+            const multiAnswerNote = document.createElement('p')
+            multiAnswerNote.className = 'text-sm text-gray-600 mb-3'
+            multiAnswerNote.textContent =
+              'This question has multiple correct answers.'
+            optionsContainer.appendChild(multiAnswerNote)
+          }
+
+          // Ensure options are always displayed in alphabetical order
+          const sortedOptions = Object.entries(question.options).sort((a, b) =>
+            a[0].localeCompare(b[0])
+          )
+
+          sortedOptions.forEach(([key, value]) => {
             const optionDiv = document.createElement('div')
-            optionDiv.className = 'p-4 border rounded-lg'
-            if (key === question.correct_answer) {
-              optionDiv.dataset.correct = 'true'
-            }
-            optionDiv.innerHTML = `<span class="font-bold mr-2">${key}.</span> ${value}`
+            optionDiv.className = 'option-label'
+            optionDiv.dataset.optionKey = key
+            optionDiv.innerHTML = `<span class="font-bold mr-2">${key}.</span> <span>${value}</span>`
+
+            optionDiv.addEventListener('click', () => {
+              if (document.getElementById('study-show-answer-btn').disabled)
+                return // Don't allow changes after showing answer
+
+              if (isMultiAnswer) {
+                optionDiv.classList.toggle('selected')
+              } else {
+                optionsContainer
+                  .querySelectorAll('.option-label')
+                  .forEach((label) => label.classList.remove('selected'))
+                optionDiv.classList.add('selected')
+              }
+            })
             optionsContainer.appendChild(optionDiv)
           })
 
@@ -335,23 +391,39 @@
             .getElementById('study-answer-container')
             .classList.add('hidden')
           document.getElementById('study-show-answer-btn').disabled = false
+          document.getElementById('study-prev-btn').disabled = index === 0
+          document.getElementById('study-next-btn').disabled =
+            index === allQuestions.length - 1
         }
 
         const showStudyAnswer = () => {
           const question = allQuestions[currentStudyIndex]
-          document.getElementById('study-correct-answer').textContent = `${
-            question.correct_answer
-          }. ${question.options[question.correct_answer]}`
+          const correctAnswers = question.correct_answer
+            .split(',')
+            .map((s) => s.trim())
+
+          document.getElementById('study-correct-answer').textContent =
+            correctAnswers
+              .map((ans) => `${ans}. ${question.options[ans]}`)
+              .join('; ')
+          document.getElementById(
+            'study-answer-explanation'
+          ).textContent = `The correct answer${
+            correctAnswers.length > 1 ? 's are' : ' is'
+          } highlighted in green. Your incorrect selections are in red.`
           document
             .getElementById('study-answer-container')
             .classList.remove('hidden')
 
-          // Highlight the correct option
           document
-            .querySelectorAll('#study-options-container > div')
+            .querySelectorAll('#study-options-container .option-label')
             .forEach((div) => {
-              if (div.dataset.correct === 'true') {
+              const optionKey = div.dataset.optionKey
+              if (correctAnswers.includes(optionKey)) {
                 div.classList.add('correct')
+                div.classList.remove('selected') // Avoid clash of styles
+              } else if (div.classList.contains('selected')) {
+                div.classList.add('incorrect')
               }
             })
           document.getElementById('study-show-answer-btn').disabled = true
@@ -361,16 +433,15 @@
         const startQuiz = (size) => {
           const shuffled = shuffleArray([...allQuestions])
           currentQuiz = shuffled.slice(0, size)
-          userAnswers = {}
+          userQuizAnswers = {}
+          currentQuizIndex = 0
           renderQuizQuestion(0)
           showView(quizView)
         }
 
         const renderQuizQuestion = (index) => {
-          if (index >= currentQuiz.length) {
-            submitQuiz()
-            return
-          }
+          if (index < 0 || index >= currentQuiz.length) return
+          currentQuizIndex = index
 
           const question = currentQuiz[index]
           document.getElementById('quiz-question-number').textContent =
@@ -385,26 +456,67 @@
           )
           optionsContainer.innerHTML = ''
 
-          // Shuffle options for the quiz
-          const options = shuffleArray(Object.entries(question.options))
+          const correctAnswers = question.correct_answer
+            .split(',')
+            .map((s) => s.trim())
+          const isMultiAnswer = correctAnswers.length > 1
+          const inputType = isMultiAnswer ? 'checkbox' : 'radio'
 
-          options.forEach(([key, value]) => {
+          if (isMultiAnswer) {
+            const multiAnswerNote = document.createElement('p')
+            multiAnswerNote.className = 'text-sm text-gray-600 mb-3'
+            multiAnswerNote.textContent =
+              'This question may have multiple correct answers. Select all that apply.'
+            optionsContainer.appendChild(multiAnswerNote)
+          }
+
+          // Keep answers in their original order
+          const sortedOptions = Object.entries(question.options).sort((a, b) =>
+            a[0].localeCompare(b[0])
+          )
+
+          sortedOptions.forEach(([key, value]) => {
             const optionId = `q${index}_${key}`
             const wrapper = document.createElement('div')
             wrapper.innerHTML = `
-                        <input type="radio" name="quiz_question_${index}" id="${optionId}" value="${key}" class="hidden">
-                        <label for="${optionId}" class="option-label">
-                            <span class="font-bold mr-2">${key}.</span> ${value}
-                        </label>
-                    `
+                <input type="${inputType}" name="quiz_question_${index}" id="${optionId}" value="${key}" class="hidden">
+                <label for="${optionId}" class="option-label">
+                    <span class="font-bold mr-2">${key}.</span> <span>${value}</span>
+                </label>
+            `
             wrapper.querySelector('input').addEventListener('change', () => {
-              userAnswers[index] = key
-              // Automatically move to the next question
-              setTimeout(() => renderQuizQuestion(index + 1), 300)
+              if (isMultiAnswer) {
+                const checkedInputs =
+                  optionsContainer.querySelectorAll('input:checked')
+                userQuizAnswers[index] = Array.from(checkedInputs).map(
+                  (input) => input.value
+                )
+              } else {
+                userQuizAnswers[index] = key
+              }
             })
             optionsContainer.appendChild(wrapper)
           })
 
+          // Restore previous answers if they exist
+          const savedAnswers = userQuizAnswers[index]
+          if (savedAnswers) {
+            const answersArray = Array.isArray(savedAnswers)
+              ? savedAnswers
+              : [savedAnswers]
+            answersArray.forEach((key) => {
+              const input = document.getElementById(`q${index}_${key}`)
+              if (input) input.checked = true
+            })
+          }
+
+          // Button visibility
+          document.getElementById('quiz-prev-btn').disabled = index === 0
+          document.getElementById('quiz-next-btn').disabled =
+            index === currentQuiz.length - 1
+          document
+            .getElementById('quiz-next-btn')
+            .classList.toggle('hidden', index === currentQuiz.length - 1)
           document
             .getElementById('quiz-submit-btn')
             .classList.toggle('hidden', index !== currentQuiz.length - 1)
@@ -418,38 +530,66 @@
           resultsContainer.innerHTML = ''
 
           currentQuiz.forEach((question, index) => {
-            const userAnswer = userAnswers[index]
-            const isCorrect = userAnswer === question.correct_answer
-            if (isCorrect) {
-              score++
+            const userAns = userQuizAnswers[index]
+            const correctAnswers = question.correct_answer
+              .split(',')
+              .map((s) => s.trim())
+            let isCorrect = false
+
+            if (Array.isArray(userAns)) {
+              // Multi-answer question
+              isCorrect =
+                userAns.length === correctAnswers.length &&
+                [...userAns]
+                  .sort()
+                  .every((value, i) => value === [...correctAnswers].sort()[i])
+            } else {
+              // Single-answer question
+              isCorrect = userAns === correctAnswers[0]
             }
 
+            if (isCorrect) score++
+
             const resultDiv = document.createElement('div')
-            resultDiv.className = 'p-4 border rounded-lg'
+            resultDiv.className =
+              'p-4 border rounded-lg ' +
+              (isCorrect
+                ? 'border-green-200 bg-green-50'
+                : 'border-red-200 bg-red-50')
+
+            let userAnswerText = 'Not answered'
+            if (userAns && userAns.length > 0) {
+              const ansArray = Array.isArray(userAns) ? userAns : [userAns]
+              userAnswerText = ansArray
+                .map((key) => `<div>${key}. ${question.options[key]}</div>`)
+                .join('')
+            }
+
+            const correctAnswerText = correctAnswers
+              .map((key) => `<div>${key}. ${question.options[key]}</div>`)
+              .join('')
+
             resultDiv.innerHTML = `
-                        <p class="font-semibold mb-2">${index + 1}. ${
+                <p class="font-semibold mb-2">${index + 1}. ${
               question.question_text
             }</p>
-                        <p class="text-sm mb-1 ${
-                          isCorrect ? 'text-green-600' : 'text-red-600'
-                        }">
-                            Your answer: ${
-                              userAnswer
-                                ? `${userAnswer}. ${question.options[userAnswer]}`
-                                : 'Not answered'
-                            }
-                            ${isCorrect ? ' (Correct)' : ' (Incorrect)'}
-                        </p>
-                        ${
-                          !isCorrect
-                            ? `<p class="text-sm text-green-700">Correct answer: ${
-                                question.correct_answer
-                              }. ${
-                                question.options[question.correct_answer]
-                              }</p>`
-                            : ''
-                        }
-                    `
+                <div class="text-sm mb-1 ${
+                  isCorrect ? 'text-green-800' : 'text-red-800'
+                }">
+                    <p class="font-bold">Your answer:</p>
+                    <div>${userAnswerText}</div>
+                    ${
+                      isCorrect
+                        ? '<span class="font-bold mt-1 inline-block">(Correct)</span>'
+                        : '<span class="font-bold mt-1 inline-block">(Incorrect)</span>'
+                    }
+                </div>
+                ${
+                  !isCorrect
+                    ? `<div class="text-sm text-green-800 mt-2"><p class="font-bold">Correct answer(s):</p><div>${correctAnswerText}</div></div>`
+                    : ''
+                }
+            `
             resultsContainer.appendChild(resultDiv)
           })
 
@@ -466,12 +606,10 @@
             renderStudyQuestion(currentStudyIndex)
             showView(studyView)
           })
-
         document
           .getElementById('start-quiz-mode')
           .addEventListener('click', () => showView(quizSetupView))
 
-        // Back to Menu Buttons
         ;[
           'study-back-to-menu',
           'quiz-setup-back-to-menu',
@@ -521,6 +659,16 @@
             startQuiz(parseInt(e.target.dataset.size))
           )
         })
+        document
+          .getElementById('quiz-prev-btn')
+          .addEventListener('click', () =>
+            renderQuizQuestion(currentQuizIndex - 1)
+          )
+        document
+          .getElementById('quiz-next-btn')
+          .addEventListener('click', () =>
+            renderQuizQuestion(currentQuizIndex + 1)
+          )
         document
           .getElementById('quiz-submit-btn')
           .addEventListener('click', submitQuiz)
