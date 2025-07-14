@@ -65,6 +65,11 @@
         white-space: normal;
         word-wrap: break-word;
       }
+
+      /* Fix for flexbox text wrapping in Chrome */
+      .option-label > span:last-child {
+        min-width: 0;
+      }
       .option-label:hover {
         background-color: #f3f4f6;
       }
@@ -609,7 +614,6 @@
         document
           .getElementById('start-quiz-mode')
           .addEventListener('click', () => showView(quizSetupView))
-
         ;[
           'study-back-to-menu',
           'quiz-setup-back-to-menu',
